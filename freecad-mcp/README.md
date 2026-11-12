@@ -1,4 +1,6 @@
-# FreeCAD MCP local — V1
+# FreeCAD MCP — STDIO e Streamable HTTP
+
+O registro STDIO existente continua compatível. O modo HTTP usa o SDK oficial, autenticação obrigatória e validação de Host/Origin, mantendo o mesmo bridge gráfico e catálogo de 34 ferramentas. Veja [configuração dos transportes, Codex e ChatGPT Web](docs/TRANSPORTS.md), incluindo os limites da validação e os requisitos da conta para Secure MCP Tunnel.
 
 Servidor MCP STDIO com 34 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte original do FreeCAD foi preservado.
 

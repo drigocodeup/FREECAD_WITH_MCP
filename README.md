@@ -1,5 +1,7 @@
 # FreeCAD with MCP
 
+Dois transportes compartilham as mesmas 34 ferramentas: **STDIO** para Codex/VS Code e **Streamable HTTP autenticado** para clientes remotos. O HTTP usa localhost por padrão; a preparação para ChatGPT Web inclui OAuth externo e Secure MCP Tunnel, sem publicação automática. Consulte [instalação, segurança e integração com ChatGPT](freecad-mcp/docs/TRANSPORTS.md).
+
 Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 34 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
 
 Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).

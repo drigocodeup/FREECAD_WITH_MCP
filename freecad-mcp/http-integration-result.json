@@ -1,0 +1,372 @@
+{
+  "transport": "streamable-http",
+  "calls": [
+    {
+      "tool": "health_check",
+      "arguments": {},
+      "result": {
+        "freecad_version": [
+          "1",
+          "1",
+          "1",
+          "20260414 (Git shallow)",
+          "Unknown",
+          "2026/04/14 22:09:59",
+          "(HEAD detached at 0108fd4b4)",
+          "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+        ],
+        "python": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]",
+        "gui": true,
+        "documents": [
+          "GeradoresCESS",
+          "HTTP_1794493653915980000",
+          "TesteMCP_1794493661",
+          "suporte_teste"
+        ],
+        "workspace": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos",
+        "thread": "Qt GUI main thread",
+        "units": "mm",
+        "operations": [
+          "boolean_cut",
+          "boolean_intersection",
+          "boolean_union",
+          "capture_view",
+          "close_document",
+          "copy_object",
+          "create_box",
+          "create_cone",
+          "create_cylinder",
+          "create_sphere",
+          "create_torus",
+          "delete_object",
+          "export_step",
+          "export_stl",
+          "fit_all",
+          "generate_box_with_lid",
+          "generate_channel_letters",
+          "generate_channel_numbers",
+          "generate_gear",
+          "generate_organizer",
+          "get_bounding_box",
+          "get_object_properties",
+          "get_volume",
+          "health_check",
+          "list_documents",
+          "list_objects",
+          "move_object",
+          "new_document",
+          "open_document",
+          "rotate_object",
+          "save_document",
+          "save_fcstd",
+          "set_view",
+          "validate_shape"
+        ]
+      }
+    },
+    {
+      "tool": "new_document",
+      "arguments": {
+        "name": "HTTP_1794494337688083600"
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600"
+      }
+    },
+    {
+      "tool": "create_box",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Base",
+        "length": 40,
+        "width": 30,
+        "height": 6
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Base",
+        "label": "Base",
+        "type": "Part::Box",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 7200.0,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            40.0,
+            30.0,
+            6.0
+          ],
+          "size": [
+            40.0,
+            30.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "create_cylinder",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Furo",
+        "radius": 3,
+        "height": 8,
+        "position": [
+          20,
+          15,
+          -1
+        ]
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Furo",
+        "label": "Furo",
+        "type": "Part::Cylinder",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 226.19467105846508,
+        "bounding_box": {
+          "min": [
+            17.0,
+            12.01643431389518,
+            -1.0
+          ],
+          "max": [
+            23.0,
+            17.983565686104818,
+            7.0
+          ],
+          "size": [
+            6.0,
+            5.9671313722096375,
+            8.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "boolean_cut",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Peca",
+        "base": "Base",
+        "tool": "Furo"
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Peca",
+        "label": "Peca",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 7030.3539967061515,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            40.0,
+            30.0,
+            6.0
+          ],
+          "size": [
+            40.0,
+            30.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "validate_shape",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "object_name": "Peca"
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Peca",
+        "label": "Peca",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 7030.3539967061515,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            40.0,
+            30.0,
+            6.0
+          ],
+          "size": [
+            40.0,
+            30.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "get_bounding_box",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "object_name": "Peca"
+      },
+      "result": {
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            40.0,
+            30.0,
+            6.0
+          ],
+          "size": [
+            40.0,
+            30.0,
+            6.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "set_view",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "view": "isometric"
+      },
+      "result": {
+        "view": "isometric"
+      }
+    },
+    {
+      "tool": "fit_all",
+      "arguments": {
+        "document": "HTTP_1794494337688083600"
+      },
+      "result": {
+        "view": "fit_all"
+      }
+    },
+    {
+      "tool": "save_fcstd",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "filename": "HTTP_1794494337688083600.FCStd"
+      },
+      "result": {
+        "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\HTTP_1794494337688083600.FCStd",
+        "bytes": 11105
+      }
+    },
+    {
+      "tool": "export_step",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "filename": "HTTP_1794494337688083600.step",
+        "object_names": [
+          "Peca"
+        ]
+      },
+      "result": {
+        "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\HTTP_1794494337688083600.step",
+        "bytes": 8292
+      }
+    },
+    {
+      "tool": "export_stl",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "filename": "HTTP_1794494337688083600.stl",
+        "object_names": [
+          "Peca"
+        ]
+      },
+      "result": {
+        "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\HTTP_1794494337688083600.stl",
+        "bytes": 26084
+      }
+    },
+    {
+      "tool": "capture_view",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "filename": "HTTP_1794494337688083600.png"
+      },
+      "result": {
+        "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\HTTP_1794494337688083600.png",
+        "bytes": 11097
+      }
+    },
+    {
+      "tool": "close_document",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "discard": true
+      },
+      "result": {
+        "closed": "HTTP_1794494337688083600"
+      }
+    },
+    {
+      "tool": "open_document",
+      "arguments": {
+        "filename": "HTTP_1794494337688083600.FCStd"
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "objects": 3
+      }
+    },
+    {
+      "tool": "validate_shape",
+      "arguments": {
+        "document": "HTTP_1794494337688083600",
+        "object_name": "Peca"
+      },
+      "result": {
+        "document": "HTTP_1794494337688083600",
+        "name": "Peca",
+        "label": "Peca",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 7030.3539967061515,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            40.0,
+            30.0,
+            6.0
+          ],
+          "size": [
+            40.0,
+            30.0,
+            6.0
+          ]
+        }
+      }
+    }
+  ],
+  "passed": true,
+  "expected_volume_mm3": 7030.3539967061515,
+  "actual_volume_mm3": 7030.3539967061515
+}

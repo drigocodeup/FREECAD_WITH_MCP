@@ -1,8 +1,8 @@
 [project]
 name = "freecad-local-mcp"
-version = "0.2.0"
+version = "0.3.0"
 requires-python = ">=3.11"
-dependencies = ["mcp>=1.20,<2"]
+dependencies = ["mcp>=1.30,<2", "PyJWT[crypto]>=2.10,<3"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
