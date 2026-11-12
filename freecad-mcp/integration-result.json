@@ -1,0 +1,399 @@
+{
+  "started": "2026-11-11T23:09:36",
+  "calls": [
+    {
+      "tool": "freecad_health_check",
+      "arguments": {},
+      "result": {
+        "freecad_version": [
+          "1",
+          "1",
+          "1",
+          "20260414 (Git shallow)",
+          "Unknown",
+          "2026/04/14 22:09:59",
+          "(HEAD detached at 0108fd4b4)",
+          "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+        ],
+        "python": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]",
+        "gui": true,
+        "documents": [],
+        "workspace": "<workspace>\\modelos",
+        "thread": "Qt GUI main thread",
+        "units": "mm",
+        "operations": [
+          "boolean_cut",
+          "boolean_intersection",
+          "boolean_union",
+          "capture_view",
+          "close_document",
+          "copy_object",
+          "create_box",
+          "create_cone",
+          "create_cylinder",
+          "create_sphere",
+          "create_torus",
+          "delete_object",
+          "export_step",
+          "export_stl",
+          "fit_all",
+          "get_bounding_box",
+          "get_object_properties",
+          "get_volume",
+          "health_check",
+          "list_documents",
+          "list_objects",
+          "move_object",
+          "new_document",
+          "open_document",
+          "rotate_object",
+          "save_document",
+          "save_fcstd",
+          "set_view",
+          "validate_shape"
+        ]
+      }
+    },
+    {
+      "tool": "freecad_list_documents",
+      "arguments": {},
+      "result": {
+        "documents": []
+      }
+    },
+    {
+      "tool": "freecad_new_document",
+      "arguments": {
+        "name": "TesteMCP"
+      },
+      "result": {
+        "document": "TesteMCP"
+      }
+    },
+    {
+      "tool": "freecad_create_box",
+      "arguments": {
+        "document": "TesteMCP",
+        "name": "Caixa",
+        "length": 100,
+        "width": 60,
+        "height": 20
+      },
+      "result": {
+        "document": "TesteMCP",
+        "name": "Caixa",
+        "label": "Caixa",
+        "type": "Part::Box",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 120000.0,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            60.0,
+            20.0
+          ],
+          "size": [
+            100.0,
+            60.0,
+            20.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "freecad_create_cylinder",
+      "arguments": {
+        "document": "TesteMCP",
+        "name": "Cilindro",
+        "radius": 8,
+        "height": 30
+      },
+      "result": {
+        "document": "TesteMCP",
+        "name": "Cilindro",
+        "label": "Cilindro",
+        "type": "Part::Cylinder",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 6031.857894892402,
+        "bounding_box": {
+          "min": [
+            -8.0,
+            -8.0,
+            0.0
+          ],
+          "max": [
+            8.0,
+            8.0,
+            30.0
+          ],
+          "size": [
+            16.0,
+            16.0,
+            30.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "freecad_move_object",
+      "arguments": {
+        "document": "TesteMCP",
+        "object_name": "Cilindro",
+        "position": [
+          50,
+          30,
+          -5
+        ]
+      },
+      "result": {
+        "document": "TesteMCP",
+        "name": "Cilindro",
+        "label": "Cilindro",
+        "type": "Part::Cylinder",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 6031.857894892402,
+        "bounding_box": {
+          "min": [
+            42.0,
+            22.0,
+            -5.0
+          ],
+          "max": [
+            58.0,
+            38.0,
+            25.0
+          ],
+          "size": [
+            16.0,
+            16.0,
+            30.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "freecad_boolean_cut",
+      "arguments": {
+        "document": "TesteMCP",
+        "name": "PlacaFurada",
+        "base": "Caixa",
+        "tool": "Cilindro"
+      },
+      "result": {
+        "document": "TesteMCP",
+        "name": "PlacaFurada",
+        "label": "PlacaFurada",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 115978.76140340508,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            60.0,
+            20.0
+          ],
+          "size": [
+            100.0,
+            60.0,
+            20.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "freecad_validate_shape",
+      "arguments": {
+        "document": "TesteMCP",
+        "object_name": "PlacaFurada"
+      },
+      "result": {
+        "document": "TesteMCP",
+        "name": "PlacaFurada",
+        "label": "PlacaFurada",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 115978.76140340508,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            60.0,
+            20.0
+          ],
+          "size": [
+            100.0,
+            60.0,
+            20.0
+          ]
+        }
+      }
+    },
+    {
+      "tool": "freecad_set_view",
+      "arguments": {
+        "document": "TesteMCP",
+        "view": "isometric"
+      },
+      "result": {
+        "view": "isometric"
+      }
+    },
+    {
+      "tool": "freecad_fit_all",
+      "arguments": {
+        "document": "TesteMCP"
+      },
+      "result": {
+        "view": "fit_all"
+      }
+    },
+    {
+      "tool": "freecad_capture_view",
+      "arguments": {
+        "document": "TesteMCP",
+        "filename": "TesteMCP_1794449378.png"
+      },
+      "result": {
+        "path": "<workspace>\\modelos\\TesteMCP_1794449378.png",
+        "bytes": 11299
+      }
+    },
+    {
+      "tool": "freecad_save_fcstd",
+      "arguments": {
+        "document": "TesteMCP",
+        "filename": "TesteMCP_1794449378.FCStd"
+      },
+      "result": {
+        "path": "<workspace>\\modelos\\TesteMCP_1794449378.FCStd",
+        "bytes": 11530
+      }
+    },
+    {
+      "tool": "freecad_export_step",
+      "arguments": {
+        "document": "TesteMCP",
+        "object_names": [
+          "PlacaFurada"
+        ],
+        "filename": "TesteMCP_1794449378.step"
+      },
+      "result": {
+        "path": "<workspace>\\modelos\\TesteMCP_1794449378.step",
+        "bytes": 8312
+      }
+    },
+    {
+      "tool": "freecad_export_stl",
+      "arguments": {
+        "document": "TesteMCP",
+        "object_names": [
+          "PlacaFurada"
+        ],
+        "filename": "TesteMCP_1794449378.stl"
+      },
+      "result": {
+        "path": "<workspace>\\modelos\\TesteMCP_1794449378.stl",
+        "bytes": 26084
+      }
+    },
+    {
+      "tool": "freecad_close_document",
+      "arguments": {
+        "document": "TesteMCP",
+        "discard": true
+      },
+      "result": {
+        "closed": "TesteMCP"
+      }
+    },
+    {
+      "tool": "freecad_open_document",
+      "arguments": {
+        "filename": "TesteMCP_1794449378.FCStd"
+      },
+      "result": {
+        "document": "TesteMCP_1794449378",
+        "objects": 3
+      }
+    },
+    {
+      "tool": "freecad_get_object_properties",
+      "arguments": {
+        "document": "TesteMCP_1794449378",
+        "object_name": "PlacaFurada"
+      },
+      "result": {
+        "document": "TesteMCP_1794449378",
+        "name": "PlacaFurada",
+        "label": "PlacaFurada",
+        "type": "Part::Cut",
+        "valid": true,
+        "solids": 1,
+        "volume_mm3": 115978.76140340508,
+        "bounding_box": {
+          "min": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            60.0,
+            20.0
+          ],
+          "size": [
+            100.0,
+            60.0,
+            20.0
+          ]
+        },
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dependencies": [
+          "Caixa",
+          "Cilindro"
+        ],
+        "properties": {
+          "Base": "<Part::Feature>",
+          "ExpressionEngine": "[]",
+          "History": "None",
+          "Label": "PlacaFurada",
+          "Label2": "",
+          "Placement": "Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]",
+          "Refine": "True",
+          "ShapeMaterial": "<Material at 000001D8F9B487B0>",
+          "Tool": "<Part::Feature>",
+          "Visibility": "True",
+          "_ElementMapVersion": "15.70200.5"
+        }
+      }
+    }
+  ],
+  "expected_volume_mm3": 115978.76140340506,
+  "actual_volume_mm3": 115978.76140340508,
+  "filename": "TesteMCP_1794449378",
+  "passed": true
+}

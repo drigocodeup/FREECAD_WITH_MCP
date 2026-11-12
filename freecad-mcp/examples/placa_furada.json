@@ -1,0 +1,128 @@
+{
+  "units": "mm",
+  "description": "Chapa 100 x 60 x 5 mm, furos diametro 6 mm; centros a 10 mm das bordas. Executar chamadas sequencialmente.",
+  "calls": [
+    {
+      "tool": "freecad_new_document",
+      "arguments": {
+        "name": "PlacaQuatroFuros"
+      }
+    },
+    {
+      "tool": "freecad_create_box",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Chapa",
+        "length": 100,
+        "width": 60,
+        "height": 5
+      }
+    },
+    {
+      "tool": "freecad_create_cylinder",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Furo1",
+        "radius": 3,
+        "height": 7,
+        "position": [
+          10,
+          10,
+          -1
+        ]
+      }
+    },
+    {
+      "tool": "freecad_boolean_cut",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Corte1",
+        "base": "Chapa",
+        "tool": "Furo1"
+      }
+    },
+    {
+      "tool": "freecad_create_cylinder",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Furo2",
+        "radius": 3,
+        "height": 7,
+        "position": [
+          90,
+          10,
+          -1
+        ]
+      }
+    },
+    {
+      "tool": "freecad_boolean_cut",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Corte2",
+        "base": "Corte1",
+        "tool": "Furo2"
+      }
+    },
+    {
+      "tool": "freecad_create_cylinder",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Furo3",
+        "radius": 3,
+        "height": 7,
+        "position": [
+          10,
+          50,
+          -1
+        ]
+      }
+    },
+    {
+      "tool": "freecad_boolean_cut",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Corte3",
+        "base": "Corte2",
+        "tool": "Furo3"
+      }
+    },
+    {
+      "tool": "freecad_create_cylinder",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Furo4",
+        "radius": 3,
+        "height": 7,
+        "position": [
+          90,
+          50,
+          -1
+        ]
+      }
+    },
+    {
+      "tool": "freecad_boolean_cut",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "name": "Corte4",
+        "base": "Corte3",
+        "tool": "Furo4"
+      }
+    },
+    {
+      "tool": "freecad_validate_shape",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "object_name": "Corte4"
+      }
+    },
+    {
+      "tool": "freecad_save_fcstd",
+      "arguments": {
+        "document": "PlacaQuatroFuros",
+        "filename": "PlacaQuatroFuros.FCStd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[project]
+name = "freecad-local-mcp"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.20,<2"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["integration: requires running FreeCAD GUI bridge"]

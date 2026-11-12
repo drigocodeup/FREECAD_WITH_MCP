@@ -1,0 +1,12 @@
+{
+  "step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 115978.76140340508
+  },
+  "stl": {
+    "facets": 520,
+    "solid": true,
+    "volume_mm3": 115980.4609375
+  }
+}
