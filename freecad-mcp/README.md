@@ -8,7 +8,17 @@ O registro STDIO existente continua compatível. O modo HTTP usa o SDK oficial, 
 
 Servidor MCP STDIO com 43 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte original do FreeCAD foi preservado.
 
-A inicialização carrega as barras **CESS — Desenho** com **Centralizar**, **Colocar cotas** e **Inserir texto**, e **CESS — Geradores**, com cinco geradores paramétricos. Consulte [instruções de desenho](cess_gui/README.md) e [instruções dos geradores](cess_gui/GENERATORS.md).
+A inicialização carrega três barras: **CESS — Desenho**, com **Centralizar**, **Colocar cotas** e **Inserir texto**; **CESS — Geradores**, com sete geradores paramétricos; e **CESS — Elétrica**, para criar, editar e exportar diagramas com prancha. Consulte [desenho](cess_gui/README.md), [geradores](cess_gui/GENERATORS.md) e [elétrica](cess_gui/ELECTRICAL.md).
+
+## Diagramas elétricos
+
+Clique em **Nova prancha elétrica**, escolha A0 a A4, orientação, grade e dados do quadro inferior. Use a biblioteca para inserir os 17 símbolos disponíveis e **Fio (2 pontos)** para conectar terminais. Movimentação, rotação, textos e desfazer são integrados ao documento. Salve FCStd e exporte PDF/SVG/PNG/JSON em `modelos`.
+
+O botão **Exemplo de comando** cria uma prancha de partida/parada com selo. [Exemplo FCStd](../modelos/eletrica/comando_contator.FCStd) · [PDF](../modelos/eletrica/comando_contator.pdf) · [Captura do editor](../modelos/eletrica/editor_exemplo.png).
+
+São desenhos vetoriais próprios inspirados na organização do CADe_SIMU, sem importação `.cad` ou simulação elétrica. Os dois transportes compartilham as sete ferramentas `freecad_electrical_*`.
+
+Na validação elétrica, os **29 testes passaram**, além dos testes gráficos e de todos os formatos. A execução selecionada teve **120 aprovados e 1 ignorado**. A regressão completa teve encerramento nativo do FreeCAD em `UIAutomationCore.dll` e **não foi aprovada**. Consulte [resultados, ocorrências e limites](docs/VALIDATION-ELECTRICAL.md).
 
 ## Ambiente instalado
 

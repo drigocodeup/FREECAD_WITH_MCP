@@ -10,7 +10,26 @@ Integração local para controlar o FreeCAD por linguagem natural usando Codex e
 
 Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).
 
-A barra **CESS — Geradores** acrescenta **Engrenagem**, **Caixa com tampa**, **Letra caixa**, **Numeros caixa** e **Organizador**, com diálogos e parâmetros editáveis no documento. [Instruções dos geradores](freecad-mcp/cess_gui/GENERATORS.md).
+A barra **CESS — Geradores** oferece sete geradores: **Engrenagem**, **Conjunto de engrenagens**, **Parafuso e porca**, **Caixa com tampa**, **Letra caixa**, **Números caixa** e **Organizador**, com diálogos e parâmetros editáveis no documento. [Instruções dos geradores](freecad-mcp/cess_gui/GENERATORS.md).
+
+## Diagramas elétricos
+
+Na barra **CESS — Elétrica**, use **Nova prancha elétrica**, **Editar diagrama**, **Exportar prancha** ou **Exemplo de comando**.
+
+- Escolha papel **A0, A1, A2, A3 ou A4**, em retrato ou paisagem.
+- Margem esquerda de 20 mm, demais de 10 mm e quadro inferior de 180 × 35 mm, com espaço reservado para o carimbo.
+- Edite empresa/escola, título, código do projeto, responsável, verificação, revisão, data e numeração das folhas.
+- Insira contatos NA/NF, botoeiras, bobinas, proteções, sinaleiro, motor, bornes e outros símbolos; são **17 símbolos vetoriais**.
+- Desenhe fios ortogonais entre terminais, mova componentes, gire, insira textos e desfaça alterações. Os fios acompanham os componentes.
+- Salve em **FCStd** com página TechDraw e exporte **PDF, SVG, PNG ou JSON** para `modelos`.
+
+![Editor elétrico com comando de partida, parada e selo](modelos/eletrica/editor_exemplo.png)
+
+[Abrir exemplo FCStd](modelos/eletrica/comando_contator.FCStd) · [Prancha PDF](modelos/eletrica/comando_contator.pdf) · [Imagem da prancha](modelos/eletrica/comando_contator.png) · [Manual do módulo](freecad-mcp/cess_gui/ELECTRICAL.md)
+
+A organização funcional foi inspirada nas referências locais do CADe_SIMU. Os símbolos são próprios; esta versão não importa arquivos `.cad`, não simula circuitos e não realiza verificação normativa.
+
+## Exemplos mecânicos
 
 | Gerador | Exemplo FCStd | Prévia |
 |---|---|---|
@@ -50,7 +69,7 @@ Inicie o bridge:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\freecad-mcp\scripts\start.ps1
 ```
 
-Também é possível abrir com `Iniciar_FreeCAD_CESS.cmd`. O lançador carrega a barra de desenho na aplicação instalada, sem compilar as fontes do FreeCAD.
+Também é possível abrir com `Iniciar_FreeCAD_CESS.cmd`. O lançador carrega as barras de desenho, geradores e elétrica na aplicação instalada, sem compilar as fontes do FreeCAD.
 
 Se FreeCAD já estiver aberto, o script informa a macro a executar pelo menu **Macro > Macros**, preservando a instância existente.
 
@@ -68,13 +87,26 @@ Abra uma nova sessão Codex para atualizar o catálogo e solicite:
 
 ## Arquitetura
 
-`Codex → MCP STDIO → bridge local autenticado → thread principal Qt do FreeCAD → Part/OCCT → arquivos`.
+`Cliente → MCP STDIO ou Streamable HTTP → bridge local autenticado → thread principal Qt do FreeCAD → Part/OCCT ou TechDraw → arquivos`.
 
 O bridge aceita somente operações permitidas, sem execução arbitrária de Python. Escuta exclusivamente em loopback; o token fica em `.runtime`, protegida por ACL no Windows e excluída do Git. Gravações são restritas à pasta `modelos`, sem sobrescrita por padrão.
 
 ## Validação
 
-Na execução local registrada: **14 testes aprovados e 1 ignorado** por privilégio Windows de link simbólico. A integração foi testada com chamadas MCP reais, incluindo salvar, fechar e reabrir a peça.
+Validação mais recente do módulo elétrico, em **12/11/2026**:
+
+- **29 testes elétricos aprovados**, incluindo criação, edição, exportação e reabertura de documentos reais pelos dois transportes MCP.
+- Teste gráfico com inserção de símbolos e fio por mouse, edição de posição, atualização das conexões, desfazer e edição do carimbo.
+- Dez combinações de formato/orientação verificadas em TechDraw e nos PDFs exportados; exemplo FCStd reaberto e PDF revisado visualmente.
+- **120 testes aprovados e 1 ignorado** na execução selecionada, excluindo os testes MCP de conjuntos de engrenagens e dos cinco geradores.
+
+**Limitação da regressão completa:** a aplicação FreeCAD encerrou durante os geradores mecânicos. A última execução completa terminou com **118 aprovados, 4 falhas e 1 ignorado**; as chamadas posteriores falharam porque o bridge foi perdido. Os registros nativos apontaram `UIAutomationCore.dll`, sem causa raiz determinada. A regressão completa não está aprovada. Impressão física e outros computadores/versões do FreeCAD ainda não foram testados.
+
+[Relatório elétrico e limites](freecad-mcp/docs/VALIDATION-ELECTRICAL.md) · [Resumo da regressão](freecad-mcp/electrical-regression-summary.json) · [Interface gráfica](freecad-mcp/electrical-gui-validation.json) · [STDIO](freecad-mcp/electrical-stdio-validation.json) · [HTTP](freecad-mcp/electrical-http-validation.json) · [PDFs](freecad-mcp/electrical-pdf-validation.json)
+
+Resultados anteriores, preservados como histórico da implementação:
+
+A primeira integração mecânica teve **14 testes aprovados e 1 ignorado** por privilégio Windows de link simbólico, incluindo salvar, fechar e reabrir a peça:
 
 - Volume teórico: **115978,76140340506 mm³**.
 - Volume medido após reabrir: **115978,76140340508 mm³**.
@@ -101,6 +133,6 @@ Os testes de integração criam arquivos locais novos. Não exigem nem enviam da
 
 ## Escopo e evolução
 
-V1 implementa sólidos Part, FCStd, STEP, STL e PNG. A extensão de interface acrescenta centralização entre objetos independentes e acesso às ferramentas Draft de cotas e texto na vista do modelo. Desenhos TechDraw cotados, centralização de geometrias dentro do mesmo esboço e CAM/G-code ainda não estão implementados.
+O projeto implementa sólidos Part, sete geradores paramétricos, centralização entre objetos independentes, cotas/textos Draft e diagramas elétricos em páginas TechDraw. Exporta modelos mecânicos em FCStd/STEP/STL/PNG e pranchas elétricas em PDF/SVG/PNG/JSON. Desenhos mecânicos TechDraw cotados, centralização dentro do mesmo esboço, simulação elétrica e CAM/G-code ainda não estão implementados.
 
 Consulte [instruções detalhadas](freecad-mcp/README.md), [diagnóstico da execução](freecad-mcp/DIAGNOSTICO.md) e [próximas melhorias](ROADMAP.md).
