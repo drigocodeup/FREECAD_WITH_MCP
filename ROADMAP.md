@@ -1,11 +1,11 @@
 # Próximas melhorias
 
-Requisitos solicitados pelo usuário, ainda não implementados nesta versão:
+Implementado na barra **CESS — Desenho**:
 
-- **Centralização automática:** botão para selecionar um objeto e uma referência e alinhar seus centros horizontalmente, verticalmente ou em ambos os eixos. Exemplo: quadrado menor centralizado dentro do maior.
-- **Cotas:** selecionar aresta ou dois pontos e posicionar uma medida.
-- **Textos:** inserir conteúdo com posição, tamanho e orientação configuráveis.
+- **Centralização automática:** botão para selecionar dois objetos independentes e alinhar centros pelos eixos escolhidos, com desfazer/refazer. Exemplo: quadrado menor centralizado dentro do maior.
+- **Cotas:** botão para iniciar a ferramenta interativa Draft Dimension na vista do modelo.
+- **Textos:** botão para iniciar Draft Text, com edição pelas opções/propriedades nativas.
 
-A definir antes da implementação: cotas e textos diretamente na vista/modelo, em folha técnica para impressão/PDF, ou ambos. A centralização deve distinguir geometria de Sketcher de objetos independentes e preservar vínculos e restrições existentes.
+Próximos incrementos: cotas e textos em folha técnica para impressão/PDF via TechDraw; centralização de geometrias dentro de um único Sketcher usando restrições; centralização associativa após redimensionar. A versão atual preserva vínculos existentes recusando movimento de objetos anexados ou dirigidos por expressões.
 
 Outras extensões possíveis: esboços e restrições Sketcher, recursos PartDesign, páginas TechDraw e exportação de desenhos técnicos.

@@ -2,6 +2,8 @@
 
 Servidor MCP STDIO com 29 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte em `../FreeCAD` foi preservado.
 
+A inicialização também carrega a barra **CESS — Desenho** com **Centralizar**, **Colocar cotas** e **Inserir texto**. Consulte [instruções da barra](cess_gui/README.md). Essa extensão de interface é independente do catálogo das 29 ferramentas MCP.
+
 ## Ambiente instalado
 
 - FreeCAD 1.1.1: `C:/Program Files/FreeCAD 1.1/bin/freecad.exe`.

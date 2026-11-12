@@ -18,6 +18,8 @@ sys.path.insert(0, $ProjectLiteral)
 try:
     from bridge.freecad_bridge import start
     start($ProjectLiteral)
+    from cess_gui.toolbar import install
+    install()
 except Exception:
     from pathlib import Path
     Path($ProjectLiteral + '/.runtime/startup-error.log').write_text(traceback.format_exc(), encoding='utf-8')

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "toolbar": [
+    "Centralizar",
+    "Colocar cotas",
+    "Inserir texto"
+  ],
+  "alignment": {
+    "moving": "Rectangle001",
+    "reference": "Rectangle",
+    "axes": "XY",
+    "translation_mm": [
+      -45.0,
+      -30.0,
+      0.0
+    ],
+    "center": [
+      50.0,
+      50.0,
+      0.0
+    ]
+  },
+  "undo_redo": true,
+  "transformed_parent": true,
+  "dimension_mm": 100.0,
+  "text": [
+    "CESS - Centralizar, cotas e texto",
+    "Quadrados concentricos: margens de 30 mm"
+  ],
+  "document": "DesenhoCESS_1794452318",
+  "fcstd": "modelos/DesenhoCESS_1794452318.FCStd",
+  "png": "modelos/DesenhoCESS_1794452318.png",
+  "interactive_commands": {
+    "CESS_Cotas": "Dimension",
+    "CESS_Texto": "Text"
+  },
+  "ui_observed": true
+}

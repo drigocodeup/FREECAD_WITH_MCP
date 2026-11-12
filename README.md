@@ -2,6 +2,8 @@
 
 Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. V1 para Windows, com 29 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, exportação e captura da vista.
 
+Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).
+
 ![Peça criada por chamadas MCP reais](modelos/TesteMCP_1794449378.png)
 
 ## Requisitos
@@ -27,6 +29,8 @@ Inicie o bridge:
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\freecad-mcp\scripts\start.ps1
 ```
+
+Também é possível abrir com `Iniciar_FreeCAD_CESS.cmd`. O lançador carrega a barra de desenho na aplicação instalada, sem compilar as fontes do FreeCAD.
 
 Se FreeCAD já estiver aberto, o script informa a macro a executar pelo menu **Macro > Macros**, preservando a instância existente.
 
@@ -59,6 +63,8 @@ Na execução local registrada: **14 testes aprovados e 1 ignorado** por privil�
 
 Arquivos demonstrativos em [modelos](modelos). Evidências: [relatório de integração](freecad-mcp/integration-result.json), [validação das exportações](freecad-mcp/export-validation.json) e [resultado dos testes](freecad-mcp/test-results.xml). Caminhos locais foram substituídos por marcadores para publicação.
 
+A extensão de desenho tem validação adicional: **17 testes aprovados e 3 ignorados** na bateria comum (integração CAD desligada e privilégio de link simbólico ausente), mais smoke test em uma instância gráfica real. O smoke test verificou centralização, desfazer/refazer, cota de 100 mm, texto e os comandos interativos. [Evidência da GUI](freecad-mcp/gui-validation.json).
+
 Para executar os testes:
 
 ```powershell
@@ -73,6 +79,6 @@ Os testes de integração criam arquivos locais novos. Não exigem nem enviam da
 
 ## Escopo e evolução
 
-V1 implementa sólidos Part, FCStd, STEP, STL e PNG. Desenhos TechDraw cotados, ferramentas de esboço, CAM/G-code e os botões da próxima etapa ainda não estão implementados.
+V1 implementa sólidos Part, FCStd, STEP, STL e PNG. A extensão de interface acrescenta centralização entre objetos independentes e acesso às ferramentas Draft de cotas e texto na vista do modelo. Desenhos TechDraw cotados, centralização de geometrias dentro do mesmo esboço e CAM/G-code ainda não estão implementados.
 
 Consulte [instruções detalhadas](freecad-mcp/README.md), [diagnóstico da execução](freecad-mcp/DIAGNOSTICO.md) e [próximas melhorias](ROADMAP.md).
