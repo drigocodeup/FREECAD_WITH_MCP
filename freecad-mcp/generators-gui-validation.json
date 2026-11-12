@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "toolbar": [
+    "Engrenagem",
+    "Caixa com tampa",
+    "Letra caixa",
+    "Numeros caixa",
+    "Organizador"
+  ],
+  "models": {
+    "gear": {
+      "document": "CESS_gear",
+      "parameters": "GeradorCESS_Parametros",
+      "parts": [
+        {
+          "name": "GeradorCESS_Engrenagem",
+          "label": "Engrenagem - Engrenagem",
+          "solids": 1,
+          "valid": true,
+          "volume_mm3": 17306.444385232284
+        }
+      ],
+      "files": {
+        "FCStd": "modelos/geradores/gear.FCStd",
+        "step": "modelos/geradores/gear.step",
+        "stl": "modelos/geradores/gear.stl",
+        "png": "modelos/geradores/gear.png"
+      }
+    },
+    "box": {
+      "document": "CESS_box",
+      "parameters": "GeradorCESS_Parametros",
+      "parts": [
+        {
+          "name": "GeradorCESS_Base",
+          "label": "Base - Caixa com tampa",
+          "solids": 1,
+          "valid": true,
+          "volume_mm3": 48992.0
+        },
+        {
+          "name": "GeradorCESS_Tampa",
+          "label": "Tampa - Caixa com tampa",
+          "solids": 1,
+          "valid": true,
+          "volume_mm3": 22935.999999999993
+        }
+      ],
+      "files": {
+        "FCStd": "modelos/geradores/box.FCStd",
+        "step": "modelos/geradores/box.step",
+        "stl": "modelos/geradores/box.stl",
+        "png": "modelos/geradores/box.png"
+      }
+    },
+    "letters": {
+      "document": "CESS_letters",
+      "parameters": "GeradorCESS_Parametros",
+      "parts": [
+        {
+          "name": "GeradorCESS_Corpos",
+          "label": "Corpos - Letra caixa",
+          "solids": 4,
+          "valid": true,
+          "volume_mm3": 46326.39341129451
+        },
+        {
+          "name": "GeradorCESS_Frentes",
+          "label": "Frentes - Letra caixa",
+          "solids": 4,
+          "valid": true,
+          "volume_mm3": 9423.289702750013
+        }
+      ],
+      "files": {
+        "FCStd": "modelos/geradores/letters.FCStd",
+        "step": "modelos/geradores/letters.step",
+        "stl": "modelos/geradores/letters.stl",
+        "png": "modelos/geradores/letters.png"
+      }
+    },
+    "numbers": {
+      "document": "CESS_numbers",
+      "parameters": "GeradorCESS_Parametros",
+      "parts": [
+        {
+          "name": "GeradorCESS_Corpos",
+          "label": "Corpos - Numeros caixa",
+          "solids": 3,
+          "valid": true,
+          "volume_mm3": 25298.177195244487
+        },
+        {
+          "name": "GeradorCESS_Frentes",
+          "label": "Frentes - Numeros caixa",
+          "solids": 3,
+          "valid": true,
+          "volume_mm3": 4879.40638844093
+        }
+      ],
+      "files": {
+        "FCStd": "modelos/geradores/numbers.FCStd",
+        "step": "modelos/geradores/numbers.step",
+        "stl": "modelos/geradores/numbers.stl",
+        "png": "modelos/geradores/numbers.png"
+      }
+    },
+    "organizer": {
+      "document": "CESS_organizer",
+      "parameters": "GeradorCESS_Parametros",
+      "parts": [
+        {
+          "name": "GeradorCESS_Organizador",
+          "label": "Organizador - Organizador",
+          "solids": 1,
+          "valid": true,
+          "volume_mm3": 69055.99999999993
+        }
+      ],
+      "files": {
+        "FCStd": "modelos/geradores/organizer.FCStd",
+        "step": "modelos/geradores/organizer.step",
+        "stl": "modelos/geradores/organizer.stl",
+        "png": "modelos/geradores/organizer.png"
+      }
+    }
+  },
+  "invalid_dialog_rejected": true,
+  "engine_sha256": "691c732b0dd258cbf41de81f101e2bdf3597b8c8878eb03faf1ad72f90a8cbd8"
+}

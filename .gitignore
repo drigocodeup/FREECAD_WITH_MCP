@@ -8,3 +8,4 @@
 !.env.example
 *.FCStd1
 *.FCBak
+modelos/geradores_testes_*/

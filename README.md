@@ -1,8 +1,20 @@
 # FreeCAD with MCP
 
-Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. V1 para Windows, com 29 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, exportação e captura da vista.
+Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 34 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
 
 Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).
+
+A barra **CESS — Geradores** acrescenta **Engrenagem**, **Caixa com tampa**, **Letra caixa**, **Numeros caixa** e **Organizador**, com diálogos e parâmetros editáveis no documento. [Instruções dos geradores](freecad-mcp/cess_gui/GENERATORS.md).
+
+| Gerador | Exemplo FCStd | Prévia |
+|---|---|---|
+| Engrenagem evolvente | [Abrir modelo](modelos/geradores/gear.FCStd) | [Imagem](modelos/geradores/gear.png) |
+| Caixa com tampa e guia | [Abrir modelo](modelos/geradores/box.FCStd) | [Imagem](modelos/geradores/box.png) |
+| Letras caixa ocas | [Abrir modelo](modelos/geradores/letters.FCStd) | [Imagem](modelos/geradores/letters.png) |
+| Números caixa ocos | [Abrir modelo](modelos/geradores/numbers.FCStd) | [Imagem](modelos/geradores/numbers.png) |
+| Organizador com divisórias | [Abrir modelo](modelos/geradores/organizer.FCStd) | [Imagem](modelos/geradores/organizer.png) |
+
+Cada exemplo também tem STEP e STL na mesma pasta.
 
 ![Peça criada por chamadas MCP reais](modelos/TesteMCP_1794449378.png)
 
@@ -64,6 +76,8 @@ Na execução local registrada: **14 testes aprovados e 1 ignorado** por privil�
 Arquivos demonstrativos em [modelos](modelos). Evidências: [relatório de integração](freecad-mcp/integration-result.json), [validação das exportações](freecad-mcp/export-validation.json) e [resultado dos testes](freecad-mcp/test-results.xml). Caminhos locais foram substituídos por marcadores para publicação.
 
 A extensão de desenho tem validação adicional: **17 testes aprovados e 3 ignorados** na bateria comum (integração CAD desligada e privilégio de link simbólico ausente), mais smoke test em uma instância gráfica real. O smoke test verificou centralização, desfazer/refazer, cota de 100 mm, texto e os comandos interativos. [Evidência da GUI](freecad-mcp/gui-validation.json).
+
+Na bateria completa após adicionar os geradores: **47 testes aprovados e 1 ignorado**, incluindo chamadas MCP reais aos cinco geradores. Os testes gráficos, geométricos e de persistência também passaram. As exportações dos cinco modelos foram reimportadas: STEP com todos os sólidos preservados e STL com malhas fechadas. [Resultado pytest](freecad-mcp/generators-test-results.xml) · [Geometria e persistência](freecad-mcp/generators-geometry-validation.json) · [GUI](freecad-mcp/generators-gui-validation.json) · [Exportações](freecad-mcp/generators-export-validation.json) · [MCP](freecad-mcp/generators-mcp-validation.json).
 
 Para executar os testes:
 

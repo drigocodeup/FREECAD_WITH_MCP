@@ -20,7 +20,9 @@ class Operations:
             'boolean_cut', 'boolean_intersection', 'move_object', 'rotate_object',
             'copy_object', 'delete_object', 'list_objects', 'get_object_properties',
             'get_bounding_box', 'get_volume', 'validate_shape', 'export_step',
-            'export_stl', 'save_fcstd', 'fit_all', 'set_view', 'capture_view')}
+            'export_stl', 'save_fcstd', 'fit_all', 'set_view', 'capture_view',
+            'generate_gear', 'generate_box_with_lid', 'generate_channel_letters',
+            'generate_channel_numbers', 'generate_organizer')}
 
     def dispatch(self, operation, params):
         if operation not in self.allowed:
@@ -61,6 +63,42 @@ class Operations:
                 'gui': bool(App.GuiUp), 'documents': list(App.listDocuments()),
                 'workspace': str(self.root), 'thread': 'Qt GUI main thread',
                 'units': 'mm', 'operations': sorted(self.allowed)}
+
+    def generated(self, kind, document, name, params):
+        from cess_gui.generators import create_generator
+        self.unused(document,name)
+        result = create_generator(kind,params,self.doc(document),name)
+        return {'document':document, 'group':result['group'].Name,
+                'parameter_object':result['parameters'].Name,
+                'objects':[self.info(o) for o in result['objects'] if not o.Shape.isNull()]}
+
+    def generate_gear(self, document, name, teeth=24, module=2, pressure_angle=20, thickness=10, bore=8):
+        return self.generated('gear',document,name,dict(teeth=teeth,module=module,pressure_angle=pressure_angle,
+                                                      thickness=thickness,bore=bore))
+
+    def generate_box_with_lid(self, document, name, length=120, width=80, height=40, wall=2, floor=2,
+                              lid_thickness=2, lip_depth=5, clearance=.3):
+        return self.generated('box',document,name,dict(length=length,width=width,height=height,wall=wall,floor=floor,
+                              lid_thickness=lid_thickness,lip_depth=lip_depth,clearance=clearance))
+
+    def generate_channel_letters(self, document, name, text='CESS', font_file='', size=60, depth=20,
+                                 wall=1.5, floor=2, spacing=5, make_front=True, front_thickness=1.5, clearance=.2):
+        from cess_gui.generator_specs import default_font
+        return self.generated('letters',document,name,dict(text=text,font_file=font_file or default_font(),size=size,
+                              depth=depth,wall=wall,floor=floor,spacing=spacing,make_front=make_front,
+                              front_thickness=front_thickness,clearance=clearance))
+
+    def generate_channel_numbers(self, document, name, text='123', font_file='', size=60, depth=20,
+                                 wall=1.5, floor=2, spacing=5, make_front=True, front_thickness=1.5, clearance=.2):
+        from cess_gui.generator_specs import default_font
+        return self.generated('numbers',document,name,dict(text=text,font_file=font_file or default_font(),size=size,
+                              depth=depth,wall=wall,floor=floor,spacing=spacing,make_front=make_front,
+                              front_thickness=front_thickness,clearance=clearance))
+
+    def generate_organizer(self, document, name, length=120, width=80, height=40, wall=2, floor=2,
+                           rows=2, columns=3, divider=2):
+        return self.generated('organizer',document,name,dict(length=length,width=width,height=height,wall=wall,
+                              floor=floor,rows=rows,columns=columns,divider=divider))
 
     def new_document(self, name):
         self.name(name)

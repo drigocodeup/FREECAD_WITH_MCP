@@ -165,6 +165,8 @@ class DraftCommand:
 
 
 def install():
+    from cess_gui.generator_dialog import install as install_generators
+    install_generators()
     window = Gui.getMainWindow()
     existing = window.findChild(QtWidgets.QToolBar, TOOLBAR_NAME)
     if existing is not None:

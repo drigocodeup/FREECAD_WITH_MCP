@@ -1,8 +1,8 @@
 # FreeCAD MCP local — V1
 
-Servidor MCP STDIO com 29 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte em `../FreeCAD` foi preservado.
+Servidor MCP STDIO com 34 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte original do FreeCAD foi preservado.
 
-A inicialização também carrega a barra **CESS — Desenho** com **Centralizar**, **Colocar cotas** e **Inserir texto**. Consulte [instruções da barra](cess_gui/README.md). Essa extensão de interface é independente do catálogo das 29 ferramentas MCP.
+A inicialização carrega as barras **CESS — Desenho** com **Centralizar**, **Colocar cotas** e **Inserir texto**, e **CESS — Geradores**, com cinco geradores paramétricos. Consulte [instruções de desenho](cess_gui/README.md) e [instruções dos geradores](cess_gui/GENERATORS.md).
 
 ## Ambiente instalado
 
@@ -73,6 +73,7 @@ Prefixo comum `freecad_`:
 | Inspeção | list_objects, get_object_properties, get_bounding_box, get_volume, validate_shape |
 | Arquivos | export_step, export_stl, save_fcstd |
 | GUI | fit_all, set_view, capture_view |
+| Geradores | generate_gear, generate_box_with_lid, generate_channel_letters, generate_channel_numbers, generate_organizer |
 
 Esquemas de entrada derivam das funções tipadas em `tools/`. Resultados são objetos JSON com validade, quantidade de sólidos, volume, limites ou caminhos, conforme a operação. Dimensões em mm, volumes em mm³; STL não armazena unidade, interprete as coordenadas como mm.
 

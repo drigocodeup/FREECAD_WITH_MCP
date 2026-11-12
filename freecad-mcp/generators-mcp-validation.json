@@ -1,0 +1,464 @@
+{
+  "calls": [
+    {
+      "tool": "freecad_new_document",
+      "arguments": {
+        "name": "MCP_Geradores_1794484556"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556"
+      }
+    },
+    {
+      "tool": "freecad_generate_gear",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "name": "TesteGerador0"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556",
+        "group": "TesteGerador0",
+        "parameter_object": "TesteGerador0_Parametros",
+        "objects": [
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador0_Engrenagem",
+            "label": "Engrenagem - Engrenagem",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 17306.444385232284,
+            "bounding_box": {
+              "min": [
+                -26.00030374707682,
+                -26.00030374707682,
+                0.0
+              ],
+              "max": [
+                26.00030374707682,
+                26.00030374707682,
+                10.0
+              ],
+              "size": [
+                52.00060749415364,
+                52.00060749415364,
+                10.0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_generate_box_with_lid",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "name": "TesteGerador1"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556",
+        "group": "TesteGerador1",
+        "parameter_object": "TesteGerador1_Parametros",
+        "objects": [
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador1_Base",
+            "label": "Base - Caixa com tampa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 48992.0,
+            "bounding_box": {
+              "min": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "max": [
+                120.0,
+                80.0,
+                40.0
+              ],
+              "size": [
+                120.0,
+                80.0,
+                40.0
+              ]
+            }
+          },
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador1_Tampa",
+            "label": "Tampa - Caixa com tampa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 22935.999999999993,
+            "bounding_box": {
+              "min": [
+                135.0,
+                0.0,
+                0.0
+              ],
+              "max": [
+                255.0,
+                80.0,
+                7.0
+              ],
+              "size": [
+                120.0,
+                80.0,
+                7.0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_generate_channel_letters",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "name": "TesteGerador2"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556",
+        "group": "TesteGerador2",
+        "parameter_object": "TesteGerador2_Parametros",
+        "objects": [
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador2_Corpos",
+            "label": "Corpos - Letra caixa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 4,
+            "volume_mm3": 46326.39341129451,
+            "bounding_box": {
+              "min": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "max": [
+                235.98428415697674,
+                62.09302325581396,
+                20.0
+              ],
+              "size": [
+                235.98428415697674,
+                62.09302325581396,
+                20.0
+              ]
+            }
+          },
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador2_Frentes",
+            "label": "Frentes - Letra caixa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 4,
+            "volume_mm3": 9423.289702750013,
+            "bounding_box": {
+              "min": [
+                0.20002866017661355,
+                -76.89301543634858,
+                0.0
+              ],
+              "max": [
+                235.78399701589194,
+                -15.200076732122781,
+                1.5
+              ],
+              "size": [
+                235.5839683557153,
+                61.692938704225796,
+                1.5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_generate_channel_numbers",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "name": "TesteGerador3"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556",
+        "group": "TesteGerador3",
+        "parameter_object": "TesteGerador3_Parametros",
+        "objects": [
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador3_Corpos",
+            "label": "Corpos - Numeros caixa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 3,
+            "volume_mm3": 25298.177195244487,
+            "bounding_box": {
+              "min": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "max": [
+                140.17805232558138,
+                61.39534883720931,
+                20.0
+              ],
+              "size": [
+                140.17805232558138,
+                61.39534883720931,
+                20.0
+              ]
+            }
+          },
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador3_Frentes",
+            "label": "Frentes - Numeros caixa",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 3,
+            "volume_mm3": 4879.40638844093,
+            "bounding_box": {
+              "min": [
+                0.20000000000000015,
+                -76.1951529351565,
+                0.0
+              ],
+              "max": [
+                139.9779330980697,
+                -15.200000000000003,
+                1.5
+              ],
+              "size": [
+                139.77793309806972,
+                60.9951529351565,
+                1.5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_generate_organizer",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "name": "TesteGerador4"
+      },
+      "result": {
+        "document": "MCP_Geradores_1794484556",
+        "group": "TesteGerador4",
+        "parameter_object": "TesteGerador4_Parametros",
+        "objects": [
+          {
+            "document": "MCP_Geradores_1794484556",
+            "name": "TesteGerador4_Organizador",
+            "label": "Organizador - Organizador",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 69055.99999999993,
+            "bounding_box": {
+              "min": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "max": [
+                120.0,
+                80.0,
+                40.0
+              ],
+              "size": [
+                120.0,
+                80.0,
+                40.0
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_list_objects",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556"
+      },
+      "result": {
+        "objects": [
+          {
+            "name": "TesteGerador0",
+            "label": "Engrenagem",
+            "type": "App::DocumentObjectGroup",
+            "dependencies": [
+              "TesteGerador0_Parametros",
+              "TesteGerador0_Engrenagem"
+            ]
+          },
+          {
+            "name": "TesteGerador0_Parametros",
+            "label": "Parametros - Engrenagem",
+            "type": "App::FeaturePython",
+            "dependencies": []
+          },
+          {
+            "name": "TesteGerador0_Engrenagem",
+            "label": "Engrenagem - Engrenagem",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador0_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador1",
+            "label": "Caixa com tampa",
+            "type": "App::DocumentObjectGroup",
+            "dependencies": [
+              "TesteGerador1_Parametros",
+              "TesteGerador1_Base",
+              "TesteGerador1_Tampa"
+            ]
+          },
+          {
+            "name": "TesteGerador1_Parametros",
+            "label": "Parametros - Caixa com tampa",
+            "type": "App::FeaturePython",
+            "dependencies": []
+          },
+          {
+            "name": "TesteGerador1_Base",
+            "label": "Base - Caixa com tampa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador1_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador1_Tampa",
+            "label": "Tampa - Caixa com tampa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador1_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador2",
+            "label": "Letra caixa",
+            "type": "App::DocumentObjectGroup",
+            "dependencies": [
+              "TesteGerador2_Parametros",
+              "TesteGerador2_Corpos",
+              "TesteGerador2_Frentes"
+            ]
+          },
+          {
+            "name": "TesteGerador2_Parametros",
+            "label": "Parametros - Letra caixa",
+            "type": "App::FeaturePython",
+            "dependencies": []
+          },
+          {
+            "name": "TesteGerador2_Corpos",
+            "label": "Corpos - Letra caixa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador2_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador2_Frentes",
+            "label": "Frentes - Letra caixa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador2_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador3",
+            "label": "Numeros caixa",
+            "type": "App::DocumentObjectGroup",
+            "dependencies": [
+              "TesteGerador3_Parametros",
+              "TesteGerador3_Corpos",
+              "TesteGerador3_Frentes"
+            ]
+          },
+          {
+            "name": "TesteGerador3_Parametros",
+            "label": "Parametros - Numeros caixa",
+            "type": "App::FeaturePython",
+            "dependencies": []
+          },
+          {
+            "name": "TesteGerador3_Corpos",
+            "label": "Corpos - Numeros caixa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador3_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador3_Frentes",
+            "label": "Frentes - Numeros caixa",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador3_Parametros"
+            ]
+          },
+          {
+            "name": "TesteGerador4",
+            "label": "Organizador",
+            "type": "App::DocumentObjectGroup",
+            "dependencies": [
+              "TesteGerador4_Parametros",
+              "TesteGerador4_Organizador"
+            ]
+          },
+          {
+            "name": "TesteGerador4_Parametros",
+            "label": "Parametros - Organizador",
+            "type": "App::FeaturePython",
+            "dependencies": []
+          },
+          {
+            "name": "TesteGerador4_Organizador",
+            "label": "Organizador - Organizador",
+            "type": "Part::FeaturePython",
+            "dependencies": [
+              "TesteGerador4_Parametros"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tool": "freecad_save_fcstd",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556",
+        "filename": "MCP_Geradores_1794484556.FCStd"
+      },
+      "result": {
+        "path": "<workspace>\\modelos\\MCP_Geradores_1794484556.FCStd",
+        "bytes": 887831
+      }
+    },
+    {
+      "tool": "freecad_close_document",
+      "arguments": {
+        "document": "MCP_Geradores_1794484556"
+      },
+      "result": {
+        "closed": "MCP_Geradores_1794484556"
+      }
+    }
+  ],
+  "passed": true
+}

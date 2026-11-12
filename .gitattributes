@@ -5,4 +5,4 @@
 *.FCStd binary
 *.png binary
 *.stl binary
-*.step -text -whitespace
+*.step -text -whitespace -diff

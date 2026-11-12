@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "models": {
+    "gear": {
+      "expected_volume_mm3": 17306.444385232284,
+      "step_valid": true,
+      "step_solids": 1,
+      "step_volume_mm3": 17306.44438522356,
+      "stl_closed": true,
+      "stl_facets": 10488,
+      "stl_volume_mm3": 17298.173828125
+    },
+    "box": {
+      "expected_volume_mm3": 71928.0,
+      "step_valid": true,
+      "step_solids": 2,
+      "step_volume_mm3": 71927.99999999993,
+      "stl_closed": true,
+      "stl_facets": 72,
+      "stl_volume_mm3": 71928.0078125
+    },
+    "letters": {
+      "expected_volume_mm3": 55749.68311404453,
+      "step_valid": true,
+      "step_solids": 8,
+      "step_volume_mm3": 55749.683114039886,
+      "stl_closed": true,
+      "stl_facets": 20068,
+      "stl_volume_mm3": 55614.390625
+    },
+    "numbers": {
+      "expected_volume_mm3": 30177.583583685417,
+      "step_valid": true,
+      "step_solids": 6,
+      "step_volume_mm3": 30177.583583686457,
+      "stl_closed": true,
+      "stl_facets": 12442,
+      "stl_volume_mm3": 30112.947265625
+    },
+    "organizer": {
+      "expected_volume_mm3": 69055.99999999993,
+      "step_valid": true,
+      "step_solids": 1,
+      "step_volume_mm3": 69055.99999999988,
+      "stl_closed": true,
+      "stl_facets": 108,
+      "stl_volume_mm3": 69056.0078125
+    }
+  }
+}

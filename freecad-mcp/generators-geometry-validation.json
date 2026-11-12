@@ -1,0 +1,138 @@
+{
+  "geometry": {
+    "gear": {
+      "valid": true,
+      "solids": 1,
+      "bore_volume_removed": 502.6548245743543
+    },
+    "box": {
+      "base_volume": 48992.0,
+      "expected": 48992,
+      "lid_assembled_intersection_mm3": 0.0
+    },
+    "organizer": {
+      "cells_checked": 6,
+      "volume": 69055.99999999993,
+      "expected": 69056.0,
+      "solids": 1
+    },
+    "letters": {
+      "text": "CESS",
+      "lower_slice_volume": 3268.344857733769,
+      "upper_slice_volume": 923.6947837756821,
+      "body_solids": 4,
+      "front_solids": 4
+    },
+    "letters_AB_export": {
+      "step_solids": 4,
+      "step_volume_mm3": 30017.601925995143,
+      "stl_closed": true
+    },
+    "numbers": {
+      "text": "123",
+      "lower_slice_volume": 1697.6790794930878,
+      "upper_slice_volume": 514.096116115079,
+      "body_solids": 3,
+      "front_solids": 3
+    },
+    "numbers_08_export": {
+      "step_solids": 4,
+      "step_volume_mm3": 25256.358032304794,
+      "stl_closed": true
+    },
+    "letters_CESS_export": {
+      "step_solids": 8,
+      "step_volume_mm3": 55749.683114039886,
+      "stl_closed": true
+    },
+    "numbers_123_export": {
+      "step_solids": 6,
+      "step_volume_mm3": 30177.583583686457,
+      "stl_closed": true
+    },
+    "letters_ABCDEFGHIJKLM_export": {
+      "step_solids": 13,
+      "step_volume_mm3": 142257.7654021325,
+      "stl_closed": true
+    },
+    "letters_NOPQRSTUVWXYZ_export": {
+      "step_solids": 13,
+      "step_volume_mm3": 148999.95495983097,
+      "stl_closed": true
+    },
+    "letters_\u00c7\u00c1_export": {
+      "step_solids": 4,
+      "step_volume_mm3": 25199.316325212272,
+      "stl_closed": true
+    },
+    "numbers_0123456789_export": {
+      "step_solids": 10,
+      "step_volume_mm3": 94313.83460314295,
+      "stl_closed": true
+    },
+    "glyphs": "A-Z, \u00c7\u00c1, 0-9; AB and 08 with separate fronts"
+  },
+  "parametric": {
+    "gear": {
+      "parameter": "Thickness",
+      "value": 14,
+      "before_volume": 17306.444385232284,
+      "after_volume": 24229.022139325203,
+      "file": "modelos/geradores_parametricos/Gerador_gear.FCStd",
+      "parameters": "Modelo_Parametros",
+      "output_names": [
+        "Modelo_Engrenagem"
+      ]
+    },
+    "box": {
+      "parameter": "Length",
+      "value": 140,
+      "before_volume": 48992.0,
+      "after_volume": 59551.999999999956,
+      "file": "modelos/geradores_parametricos/Gerador_box.FCStd",
+      "parameters": "Modelo_Parametros",
+      "output_names": [
+        "Modelo_Base",
+        "Modelo_Tampa"
+      ]
+    },
+    "letters": {
+      "parameter": "Depth",
+      "value": 25,
+      "before_volume": 46326.39341129451,
+      "after_volume": 55563.34169016023,
+      "file": "modelos/geradores_parametricos/Gerador_letters.FCStd",
+      "parameters": "Modelo_Parametros",
+      "output_names": [
+        "Modelo_Corpos",
+        "Modelo_Frentes"
+      ]
+    },
+    "numbers": {
+      "parameter": "Depth",
+      "value": 25,
+      "before_volume": 25298.177195244487,
+      "after_volume": 30439.13853067757,
+      "file": "modelos/geradores_parametricos/Gerador_numbers.FCStd",
+      "parameters": "Modelo_Parametros",
+      "output_names": [
+        "Modelo_Corpos",
+        "Modelo_Frentes"
+      ]
+    },
+    "organizer": {
+      "parameter": "Columns",
+      "value": 4,
+      "before_volume": 69055.99999999993,
+      "after_volume": 74680.00000000009,
+      "file": "modelos/geradores_parametricos/Gerador_organizer.FCStd",
+      "parameters": "Modelo_Parametros",
+      "output_names": [
+        "Modelo_Organizador"
+      ]
+    }
+  },
+  "passed": true,
+  "fresh_process_reload": true,
+  "engine_sha256": "691c732b0dd258cbf41de81f101e2bdf3597b8c8878eb03faf1ad72f90a8cbd8"
+}

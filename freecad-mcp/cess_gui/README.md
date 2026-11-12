@@ -2,6 +2,8 @@
 
 Extensão Python para o FreeCAD instalado. Não exige compilar nem modificar o código-fonte C++ do FreeCAD. A pasta de fontes `FreeCAD/` não contém um executável nesta máquina; a aplicação utilizada é `C:/Program Files/FreeCAD 1.1/bin/freecad.exe`.
 
+Além da barra de desenho, a inicialização carrega a barra de cinco [geradores paramétricos](GENERATORS.md): engrenagem, caixa com tampa, letras caixa, números caixa e organizador.
+
 ## Abrir com os botões
 
 Na raiz do repositório, execute `Iniciar_FreeCAD_CESS.cmd`, ou:
