@@ -21,7 +21,7 @@ class Operations:
             'copy_object', 'delete_object', 'list_objects', 'get_object_properties',
             'get_bounding_box', 'get_volume', 'validate_shape', 'export_step',
             'export_stl', 'save_fcstd', 'fit_all', 'set_view', 'capture_view',
-            'generate_gear', 'generate_box_with_lid', 'generate_channel_letters',
+            'generate_gear', 'generate_gear_pair', 'generate_fastener', 'generate_box_with_lid', 'generate_channel_letters',
             'generate_channel_numbers', 'generate_organizer')}
 
     def dispatch(self, operation, params):
@@ -75,6 +75,26 @@ class Operations:
     def generate_gear(self, document, name, teeth=24, module=2, pressure_angle=20, thickness=10, bore=8):
         return self.generated('gear',document,name,dict(teeth=teeth,module=module,pressure_angle=pressure_angle,
                                                       thickness=thickness,bore=bore))
+
+    def generate_gear_pair(self, document, name, ratio='2:1', minimum_teeth=20, module=2, pressure_angle=20,
+                           thickness=10, shaft_diameter=8, shaft_extension=10, bore_clearance=.2,
+                           center_clearance=.1, input_angle=0, make_housing=True, housing_wall=3,
+                           housing_clearance=3, axial_clearance=1.5, housing_bore_clearance=.5, lid_open=True):
+        params = dict(locals())
+        for key in ('self','document','name'):
+            params.pop(key)
+        result = self.generated('gear_pair',document,name,params)
+        from cess_gui.gear_sets import gear_pair_layout
+        result['transmission'] = gear_pair_layout(params)
+        return result
+
+    def generate_fastener(self, document, name, head_type='allen', diameter=8, pitch=1.25, length=30,
+                          head_size=13, head_height=8, socket_size=6, socket_depth=4, nut_size=13,
+                          nut_height=6.5, clearance=.3, left_hand=False):
+        params = dict(locals())
+        for key in ('self','document','name'):
+            params.pop(key)
+        return self.generated('fastener',document,name,params)
 
     def generate_box_with_lid(self, document, name, length=120, width=80, height=40, wall=2, floor=2,
                               lid_thickness=2, lip_depth=5, clearance=.3):

@@ -1,8 +1,10 @@
 # FreeCAD with MCP
 
-Dois transportes compartilham as mesmas 34 ferramentas: **STDIO** para Codex/VS Code e **Streamable HTTP autenticado** para clientes remotos. O HTTP usa localhost por padrão; a preparação para ChatGPT Web inclui OAuth externo e Secure MCP Tunnel, sem publicação automática. Consulte [instalação, segurança e integração com ChatGPT](freecad-mcp/docs/TRANSPORTS.md).
+Novos geradores: [conjunto de engrenagens com dois eixos, caixa e tampa](freecad-mcp/cess_gui/GEAR_SETS.md), configurado por relação entrada:saída, e [parafuso/porca com cabeça Allen ou sextavada e rosca 3D real](freecad-mcp/cess_gui/FASTENERS.md). Ambos têm janela de parâmetros e ferramentas MCP nos dois transportes.
 
-Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 34 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
+Dois transportes compartilham as mesmas 36 ferramentas: **STDIO** para Codex/VS Code e **Streamable HTTP autenticado** para clientes remotos. O HTTP usa localhost por padrão; a preparação para ChatGPT Web inclui OAuth externo e Secure MCP Tunnel, sem publicação automática. Consulte [instalação, segurança e integração com ChatGPT](freecad-mcp/docs/TRANSPORTS.md).
+
+Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 36 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
 
 Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).
 
@@ -10,6 +12,8 @@ A barra **CESS — Geradores** acrescenta **Engrenagem**, **Caixa com tampa**, *
 
 | Gerador | Exemplo FCStd | Prévia |
 |---|---|---|
+| Conjunto com caixa e tampa | [Redução 2:1](modelos/conjuntos_engrenagens/reducao_2_1.FCStd) | [Imagem](modelos/conjuntos_engrenagens/reducao_2_1.png) |
+| Parafuso Allen e porca | [Abrir modelo](modelos/parafusos_porcas/allen.FCStd) | [Imagem](modelos/parafusos_porcas/allen.png) |
 | Engrenagem evolvente | [Abrir modelo](modelos/geradores/gear.FCStd) | [Imagem](modelos/geradores/gear.png) |
 | Caixa com tampa e guia | [Abrir modelo](modelos/geradores/box.FCStd) | [Imagem](modelos/geradores/box.png) |
 | Letras caixa ocas | [Abrir modelo](modelos/geradores/letters.FCStd) | [Imagem](modelos/geradores/letters.png) |

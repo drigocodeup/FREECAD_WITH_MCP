@@ -1,8 +1,10 @@
 # FreeCAD MCP — STDIO e Streamable HTTP
 
-O registro STDIO existente continua compatível. O modo HTTP usa o SDK oficial, autenticação obrigatória e validação de Host/Origin, mantendo o mesmo bridge gráfico e catálogo de 34 ferramentas. Veja [configuração dos transportes, Codex e ChatGPT Web](docs/TRANSPORTS.md), incluindo os limites da validação e os requisitos da conta para Secure MCP Tunnel.
+Novos: [Conjunto de engrenagens](cess_gui/GEAR_SETS.md), com dois eixos e caixa/tampa, e [Parafuso e porca](cess_gui/FASTENERS.md), com cabeça selecionável e rosca 3D real. São sete botões de geração e 36 ferramentas MCP.
 
-Servidor MCP STDIO com 34 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte original do FreeCAD foi preservado.
+O registro STDIO existente continua compatível. O modo HTTP usa o SDK oficial, autenticação obrigatória e validação de Host/Origin, mantendo o mesmo bridge gráfico e catálogo de 36 ferramentas. Veja [configuração dos transportes, Codex e ChatGPT Web](docs/TRANSPORTS.md), incluindo os limites da validação e os requisitos da conta para Secure MCP Tunnel.
+
+Servidor MCP STDIO com 36 ferramentas que controlam o FreeCAD instalado. A geometria real e a GUI executam na thread principal Qt. O código-fonte original do FreeCAD foi preservado.
 
 A inicialização carrega as barras **CESS — Desenho** com **Centralizar**, **Colocar cotas** e **Inserir texto**, e **CESS — Geradores**, com cinco geradores paramétricos. Consulte [instruções de desenho](cess_gui/README.md) e [instruções dos geradores](cess_gui/GENERATORS.md).
 

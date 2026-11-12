@@ -50,6 +50,45 @@ def box(p):
     return {'Base': base, 'Tampa': lid}
 
 
+def gear_pair(p):
+    from cess_gui.gear_sets import gear_pair_layout
+    layout = gear_pair_layout(p)
+    outputs = {}
+    for label,teeth,x,angle in [
+        ('Entrada',layout['input_teeth'],0,layout['input_angle']),
+        ('Saida',layout['output_teeth'],layout['center_distance'],layout['output_angle'])]:
+        shape = gear(dict(module=p['module'],teeth=teeth,pressure_angle=p['pressure_angle'],
+                          thickness=p['thickness'],bore=layout['bore']))['Engrenagem']
+        shape.rotate(App.Vector(),App.Vector(0,0,1),angle)
+        shape.translate(App.Vector(x,0,0))
+        outputs['Engrenagem'+label] = shape
+        outputs['Eixo'+label] = Part.makeCylinder(p['shaft_diameter']/2,
+            p['thickness']+2*p['shaft_extension'],App.Vector(x,0,-p['shaft_extension']))
+    if p['make_housing']:
+        wall,gap,axial = p['housing_wall'],p['housing_clearance'],p['axial_clearance']
+        r1,r2 = layout['input_tip_radius'],layout['output_tip_radius']
+        xmin,ymin = -r1-gap,-max(r1,r2)-gap
+        length,width = layout['center_distance']+r2+gap-xmin,2*(max(r1,r2)+gap)
+        bottom = -axial-wall
+        top = p['thickness']+axial
+        base = Part.makeBox(length+2*wall,width+2*wall,top-bottom,App.Vector(xmin-wall,ymin-wall,bottom))
+        cavity = Part.makeBox(length,width,top+axial+1,App.Vector(xmin,ymin,-axial))
+        base = base.cut(cavity)
+        plate = Part.makeBox(length+2*wall,width+2*wall,wall,App.Vector(xmin-wall,ymin-wall,top))
+        # A 1 mm deep/wide centering lip with 0.25 mm lateral clearance.
+        lip = Part.makeBox(length-.5,width-.5,1,App.Vector(xmin+.25,ymin+.25,top-1))
+        lip = lip.cut(Part.makeBox(length-2.5,width-2.5,3,App.Vector(xmin+1.25,ymin+1.25,top-2)))
+        lid = plate.fuse(lip)
+        for x in (0,layout['center_distance']):
+            cutter = Part.makeCylinder((p['shaft_diameter']+p['housing_bore_clearance'])/2,
+                                        top+wall-bottom+2,App.Vector(x,0,bottom-1))
+            base,lid = base.cut(cutter),lid.cut(cutter)
+        if p['lid_open']:
+            lid.translate(App.Vector(0,width+2*wall+15,0))
+        outputs.update(Caixa=base.removeSplitter(),Tampa=lid.removeSplitter())
+    return outputs
+
+
 def organizer(p):
     l,w,h,wall,floor = (p[k] for k in ('length','width','height','wall','floor'))
     rows,cols,t = p['rows'],p['columns'],p['divider']
@@ -139,7 +178,8 @@ def channel(p):
 @lru_cache(maxsize=8)
 def _build_cached(kind, encoded, font_stamp):
     p = json.loads(encoded)
-    outputs = {'gear':gear,'box':box,'letters':channel,'numbers':channel,'organizer':organizer}[kind](p)
+    from cess_gui.fasteners import build_fasteners
+    outputs = {'gear':gear,'gear_pair':gear_pair,'fastener':build_fasteners,'box':box,'letters':channel,'numbers':channel,'organizer':organizer}[kind](p)
     return {name:checked(shape,name) for name,shape in outputs.items()}
 
 
@@ -157,14 +197,21 @@ def read_parameters(obj):
     result = {}
     for field in SPECS[obj.GeneratorKind][1]:
         value = getattr(obj,field.prop)
-        result[field.key] = value.Value if hasattr(value,'Value') else value
+        result[field.key] = str(value) if field.type=='enum' else (value.Value if hasattr(value,'Value') else value)
     return result
 
 
 class ParametersProxy:
     def execute(self, obj):
         try:
-            validate(obj.GeneratorKind, read_parameters(obj))
+            values = validate(obj.GeneratorKind, read_parameters(obj))
+            if obj.GeneratorKind == 'gear_pair':
+                from cess_gui.gear_sets import gear_pair_layout
+                info = gear_pair_layout(values)
+                for prop,key in [('InputTeeth','input_teeth'),('OutputTeeth','output_teeth'),
+                                 ('CenterDistance','center_distance'),('ContactRatio','contact_ratio'),
+                                 ('SpeedMultiplier','speed_multiplier'),('TransmissionMode','mode')]:
+                    setattr(obj,prop,info[key])
             obj.LastError = ''
         except Exception as error:
             obj.LastError = str(error)
@@ -217,10 +264,18 @@ def create_generator(kind, params=None, document=None, name='GeradorCESS'):
         config.setEditorMode('LastError',1)
         types = {'length':'App::PropertyLength','float':'App::PropertyFloat',
                  'angle':'App::PropertyAngle','int':'App::PropertyInteger','bool':'App::PropertyBool',
-                 'text':'App::PropertyString','font':'App::PropertyFile'}
+                 'text':'App::PropertyString','font':'App::PropertyFile','enum':'App::PropertyEnumeration'}
         for field in SPECS[kind][1]:
             config.addProperty(types[field.type],field.prop,'Parametros',field.label)
+            if field.type=='enum':
+                setattr(config,field.prop,list(field.choices))
             setattr(config,field.prop,values[field.key])
+        if kind == 'gear_pair':
+            for prop,type_id in [('InputTeeth','Integer'),('OutputTeeth','Integer'),
+                                 ('CenterDistance','Length'),('ContactRatio','Float'),
+                                 ('SpeedMultiplier','Float'),('TransmissionMode','String')]:
+                config.addProperty('App::Property'+type_id,prop,'Resultados')
+                config.setEditorMode(prop,1)
         config.Proxy = ParametersProxy()
         group.addObject(config)
         outputs = []
@@ -241,7 +296,13 @@ def create_generator(kind, params=None, document=None, name='GeradorCESS'):
             obj.Proxy = GeneratedShapeProxy()
             if App.GuiUp:
                 obj.ViewObject.Proxy = 0
-                obj.ViewObject.ShapeColor = (.22,.57,.87) if element not in ('Tampa','Frentes') else (.95,.65,.2)
+                colors = {'EngrenagemEntrada':(.2,.55,.9),'EngrenagemSaida':(.95,.65,.2),
+                          'EixoEntrada':(.65,.65,.68),'EixoSaida':(.65,.65,.68),
+                          'Caixa':(.35,.65,.45),'Tampa':(.35,.65,.45)}
+                if kind == 'gear_pair':
+                    obj.ViewObject.ShapeColor = colors.get(element,(.22,.57,.87))
+                else:
+                    obj.ViewObject.ShapeColor = (.95,.65,.2) if element in ('Tampa','Frentes') else (.22,.57,.87)
             group.addObject(obj)
             outputs.append(obj)
         doc.recompute()

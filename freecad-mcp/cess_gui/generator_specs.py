@@ -14,6 +14,7 @@ class Field:
     default: object
     minimum: float = 0
     maximum: float = 1000
+    choices: tuple = ()
 
 
 COMMON_BOX = (
@@ -36,6 +37,38 @@ CHANNEL = (
     Field('clearance', 'Clearance', 'Folga da frente por lado', 'length', .2, 0, 2),
 )
 SPECS = {
+    'fastener': ('Parafuso e porca', (
+        Field('head_type','HeadType','Tipo de cabeca','enum','allen',choices=('allen','sextavada')),
+        Field('diameter','Diameter','Diametro nominal da rosca','length',8,2,40),
+        Field('pitch','Pitch','Passo da rosca','length',1.25,.25,6),
+        Field('length','Length','Comprimento sob a cabeca','length',30,3,200),
+        Field('head_size','HeadSize','Diametro Allen / chave da cabeca sextavada','length',13,3,80),
+        Field('head_height','HeadHeight','Altura da cabeca','length',8,1,40),
+        Field('socket_size','SocketSize','Chave Allen (entre faces)','length',6,1,40),
+        Field('socket_depth','SocketDepth','Profundidade do encaixe Allen','length',4,.5,30),
+        Field('nut_size','NutSize','Chave da porca (entre faces)','length',13,3,80),
+        Field('nut_height','NutHeight','Altura da porca','length',6.5,1,40),
+        Field('clearance','Clearance','Folga diametral porca/parafuso','length',.3,.05,2),
+        Field('left_hand','LeftHand','Rosca esquerda (desmarcada = direita)','bool',False),
+    )),
+    'gear_pair': ('Conjunto de engrenagens', (
+        Field('ratio','Ratio','Voltas entrada:saida (ex.: 2:1)','text','2:1'),
+        Field('minimum_teeth','MinimumTeeth','Minimo de dentes da menor engrenagem','int',20,12,100),
+        Field('module','Module','Modulo','length',2,.3,20),
+        Field('pressure_angle','PressureAngle','Angulo de pressao','angle',20,14.5,30),
+        Field('thickness','Thickness','Espessura das engrenagens','length',10,1,200),
+        Field('shaft_diameter','ShaftDiameter','Diametro dos dois eixos','length',8,1,100),
+        Field('shaft_extension','ShaftExtension','Prolongamento do eixo em cada lado','length',10,3,100),
+        Field('bore_clearance','BoreClearance','Folga diametral furo/eixo','length',.2,0,2),
+        Field('center_clearance','CenterClearance','Acrescimo na distancia entre eixos','length',.1,0,2),
+        Field('input_angle','InputAngle','Posicao angular da entrada','angle',0,0,36000),
+        Field('make_housing','MakeHousing','Gerar caixa e tampa','bool',True),
+        Field('housing_wall','HousingWall','Parede, fundo e tampa','length',3,2,20),
+        Field('housing_clearance','HousingClearance','Folga radial interna da caixa','length',3,2,30),
+        Field('axial_clearance','AxialClearance','Folga axial por lado','length',1.5,1.1,20),
+        Field('housing_bore_clearance','HousingBoreClearance','Folga diametral eixo/caixa','length',.5,.1,3),
+        Field('lid_open','LidOpen','Mostrar tampa separada','bool',True),
+    )),
     'gear': ('Engrenagem', (
         Field('teeth', 'Teeth', 'Numero de dentes', 'int', 24, 12, 150),
         Field('module', 'Module', 'Modulo', 'length', 2, .3, 20),
@@ -86,6 +119,9 @@ def validate(kind, params):
         if field.type == 'bool':
             if type(value) is not bool:
                 raise ValueError(field.label + ': use verdadeiro ou falso.')
+        elif field.type == 'enum':
+            if not isinstance(value,str) or value not in field.choices:
+                raise ValueError(field.label+': escolha '+', '.join(field.choices)+'.')
         elif field.type in ('text', 'font'):
             if not isinstance(value, str):
                 raise ValueError(field.label + ': texto esperado.')
@@ -98,7 +134,27 @@ def validate(kind, params):
                 raise ValueError(f'{field.label}: intervalo {field.minimum} a {field.maximum}.')
             if field.type != 'int':
                 values[field.key] = float(value)
-    if kind == 'gear':
+    if kind == 'fastener':
+        d,p = values['diameter'],values['pitch']
+        if p>d/3:
+            raise ValueError('Passo excessivo para esse diametro; use passo ate diametro/3.')
+        if values['length']<2*p or values['nut_height']<2*p:
+            raise ValueError('Comprimento e altura da porca precisam comportar ao menos duas voltas.')
+        if max(values['length'],values['nut_height'])/p>40:
+            raise ValueError('Limite de 40 voltas de rosca real por peca. Aumente o passo ou reduza o comprimento.')
+        if values['head_size']<=d+1:
+            raise ValueError('Cabeca pequena demais para o diametro do parafuso.')
+        if values['nut_size']<=d+values['clearance']+2:
+            raise ValueError('Porca precisa de pelo menos 1 mm de parede radial alem da rosca.')
+        if values['head_type']=='allen':
+            if values['socket_depth']>=values['head_height']-.5:
+                raise ValueError('O encaixe Allen precisa deixar ao menos 0,5 mm de fundo.')
+            if values['socket_size']/math.sqrt(3)>=values['head_size']/2-.5:
+                raise ValueError('Chave Allen grande demais para essa cabeca.')
+    elif kind == 'gear_pair':
+        from cess_gui.gear_sets import gear_pair_layout
+        gear_pair_layout(values)
+    elif kind == 'gear':
         root_diameter = values['module'] * (values['teeth'] - 2.5)
         if values['bore'] >= root_diameter - 2 * values['module']:
             raise ValueError('Furo grande demais: preserve material entre o furo e a raiz dos dentes.')

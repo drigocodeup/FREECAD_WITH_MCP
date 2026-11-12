@@ -1,0 +1,647 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "transport": "stdio",
+      "head": "allen",
+      "prefix": "parafusos_porcas/Fixador_allen_1794500843598081800",
+      "calls": [
+        {
+          "tool": "new_document",
+          "arguments": {
+            "name": "Fixador_allen_1794500843598081800"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800"
+          }
+        },
+        {
+          "tool": "generate_fastener",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "name": "Fixador",
+            "head_type": "allen"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "group": "Fixador",
+            "parameter_object": "Fixador_Parametros",
+            "objects": [
+              {
+                "document": "Fixador_allen_1794500843598081800",
+                "name": "Fixador_Parafuso",
+                "label": "Parafuso - Parafuso e porca",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 2166.305315399864,
+                "bounding_box": {
+                  "min": [
+                    -6.5,
+                    -6.452607681637353,
+                    0.0
+                  ],
+                  "max": [
+                    6.5,
+                    6.4526076816373505,
+                    38.0
+                  ],
+                  "size": [
+                    13.0,
+                    12.905215363274703,
+                    38.0
+                  ]
+                }
+              },
+              {
+                "document": "Fixador_allen_1794500843598081800",
+                "name": "Fixador_Porca",
+                "label": "Porca - Parafuso e porca",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 662.493155779749,
+                "bounding_box": {
+                  "min": [
+                    15.494446500534865,
+                    -6.5,
+                    -1.214306433183765e-17
+                  ],
+                  "max": [
+                    30.505553499465137,
+                    6.500000000000001,
+                    6.500000000000001
+                  ],
+                  "size": [
+                    15.011106998930272,
+                    13.0,
+                    6.500000000000001
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_name": "Fixador_Parafuso"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "name": "Fixador_Parafuso",
+            "label": "Parafuso - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 2166.305315399864,
+            "bounding_box": {
+              "min": [
+                -6.5,
+                -6.452607681637353,
+                0.0
+              ],
+              "max": [
+                6.5,
+                6.4526076816373505,
+                38.0
+              ],
+              "size": [
+                13.0,
+                12.905215363274703,
+                38.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_name": "Fixador_Porca"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "name": "Fixador_Porca",
+            "label": "Porca - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 662.493155779749,
+            "bounding_box": {
+              "min": [
+                15.494446500534865,
+                -6.5,
+                -1.214306433183765e-17
+              ],
+              "max": [
+                30.505553499465137,
+                6.500000000000001,
+                6.500000000000001
+              ],
+              "size": [
+                15.011106998930272,
+                13.0,
+                6.500000000000001
+              ]
+            }
+          }
+        },
+        {
+          "tool": "set_view",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "view": "isometric"
+          },
+          "result": {
+            "view": "isometric"
+          }
+        },
+        {
+          "tool": "fit_all",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800"
+          },
+          "result": {
+            "view": "fit_all"
+          }
+        },
+        {
+          "tool": "capture_view",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800.png",
+            "width": 1400,
+            "height": 1000
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_allen_1794500843598081800.png",
+            "bytes": 62859
+          }
+        },
+        {
+          "tool": "save_fcstd",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800.FCStd"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_allen_1794500843598081800.FCStd",
+            "bytes": 558054
+          }
+        },
+        {
+          "tool": "export_step",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_names": [
+              "Fixador_Parafuso",
+              "Fixador_Porca"
+            ],
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800.step"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_allen_1794500843598081800.step",
+            "bytes": 930167
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_names": [
+              "Fixador_Parafuso"
+            ],
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800_Fixador_Parafuso.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_allen_1794500843598081800_Fixador_Parafuso.stl",
+            "bytes": 298284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_names": [
+              "Fixador_Porca"
+            ],
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800_Fixador_Porca.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_allen_1794500843598081800_Fixador_Porca.stl",
+            "bytes": 69384
+          }
+        },
+        {
+          "tool": "close_document",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "discard": true
+          },
+          "result": {
+            "closed": "Fixador_allen_1794500843598081800"
+          }
+        },
+        {
+          "tool": "open_document",
+          "arguments": {
+            "filename": "parafusos_porcas/Fixador_allen_1794500843598081800.FCStd"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "objects": 4
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_name": "Fixador_Parafuso"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "name": "Fixador_Parafuso",
+            "label": "Parafuso - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 2166.3053153998653,
+            "bounding_box": {
+              "min": [
+                -6.5,
+                -6.452607681637353,
+                0.0
+              ],
+              "max": [
+                6.5,
+                6.4526076816373505,
+                38.0
+              ],
+              "size": [
+                13.0,
+                12.905215363274703,
+                38.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_allen_1794500843598081800",
+            "object_name": "Fixador_Porca"
+          },
+          "result": {
+            "document": "Fixador_allen_1794500843598081800",
+            "name": "Fixador_Porca",
+            "label": "Porca - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 662.4931557797491,
+            "bounding_box": {
+              "min": [
+                15.494446500534865,
+                -6.5,
+                0.0
+              ],
+              "max": [
+                30.505553499465137,
+                6.500000000000001,
+                6.500000000000001
+              ],
+              "size": [
+                15.011106998930272,
+                13.0,
+                6.500000000000001
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transport": "streamable-http",
+      "head": "sextavada",
+      "prefix": "parafusos_porcas/Fixador_sextavada_1794500855167447900",
+      "calls": [
+        {
+          "tool": "new_document",
+          "arguments": {
+            "name": "Fixador_sextavada_1794500855167447900"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900"
+          }
+        },
+        {
+          "tool": "generate_fastener",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "name": "Fixador",
+            "head_type": "sextavada"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "group": "Fixador",
+            "parameter_object": "Fixador_Parametros",
+            "objects": [
+              {
+                "document": "Fixador_sextavada_1794500855167447900",
+                "name": "Fixador_Parafuso",
+                "label": "Parafuso - Parafuso e porca",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 2400.0209865229053,
+                "bounding_box": {
+                  "min": [
+                    -7.505553499465135,
+                    -6.5,
+                    0.0
+                  ],
+                  "max": [
+                    7.505553499465135,
+                    6.500000000000001,
+                    38.0
+                  ],
+                  "size": [
+                    15.01110699893027,
+                    13.0,
+                    38.0
+                  ]
+                }
+              },
+              {
+                "document": "Fixador_sextavada_1794500855167447900",
+                "name": "Fixador_Porca",
+                "label": "Porca - Parafuso e porca",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 662.493155779749,
+                "bounding_box": {
+                  "min": [
+                    15.494446500534865,
+                    -6.5,
+                    -1.214306433183765e-17
+                  ],
+                  "max": [
+                    30.505553499465137,
+                    6.500000000000001,
+                    6.500000000000001
+                  ],
+                  "size": [
+                    15.011106998930272,
+                    13.0,
+                    6.500000000000001
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_name": "Fixador_Parafuso"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "name": "Fixador_Parafuso",
+            "label": "Parafuso - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 2400.0209865229053,
+            "bounding_box": {
+              "min": [
+                -7.505553499465135,
+                -6.5,
+                0.0
+              ],
+              "max": [
+                7.505553499465135,
+                6.500000000000001,
+                38.0
+              ],
+              "size": [
+                15.01110699893027,
+                13.0,
+                38.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_name": "Fixador_Porca"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "name": "Fixador_Porca",
+            "label": "Porca - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 662.493155779749,
+            "bounding_box": {
+              "min": [
+                15.494446500534865,
+                -6.5,
+                -1.214306433183765e-17
+              ],
+              "max": [
+                30.505553499465137,
+                6.500000000000001,
+                6.500000000000001
+              ],
+              "size": [
+                15.011106998930272,
+                13.0,
+                6.500000000000001
+              ]
+            }
+          }
+        },
+        {
+          "tool": "set_view",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "view": "isometric"
+          },
+          "result": {
+            "view": "isometric"
+          }
+        },
+        {
+          "tool": "fit_all",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900"
+          },
+          "result": {
+            "view": "fit_all"
+          }
+        },
+        {
+          "tool": "capture_view",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900.png",
+            "width": 1400,
+            "height": 1000
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_sextavada_1794500855167447900.png",
+            "bytes": 60099
+          }
+        },
+        {
+          "tool": "save_fcstd",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900.FCStd"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_sextavada_1794500855167447900.FCStd",
+            "bytes": 556076
+          }
+        },
+        {
+          "tool": "export_step",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_names": [
+              "Fixador_Parafuso",
+              "Fixador_Porca"
+            ],
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900.step"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_sextavada_1794500855167447900.step",
+            "bytes": 928332
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_names": [
+              "Fixador_Parafuso"
+            ],
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900_Fixador_Parafuso.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_sextavada_1794500855167447900_Fixador_Parafuso.stl",
+            "bytes": 1529784
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_names": [
+              "Fixador_Porca"
+            ],
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900_Fixador_Porca.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\parafusos_porcas\\Fixador_sextavada_1794500855167447900_Fixador_Porca.stl",
+            "bytes": 69384
+          }
+        },
+        {
+          "tool": "close_document",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "discard": true
+          },
+          "result": {
+            "closed": "Fixador_sextavada_1794500855167447900"
+          }
+        },
+        {
+          "tool": "open_document",
+          "arguments": {
+            "filename": "parafusos_porcas/Fixador_sextavada_1794500855167447900.FCStd"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "objects": 4
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_name": "Fixador_Parafuso"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "name": "Fixador_Parafuso",
+            "label": "Parafuso - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 2400.0209865229053,
+            "bounding_box": {
+              "min": [
+                -7.505553499465135,
+                -6.5,
+                0.0
+              ],
+              "max": [
+                7.505553499465135,
+                6.500000000000001,
+                38.0
+              ],
+              "size": [
+                15.01110699893027,
+                13.0,
+                38.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "object_name": "Fixador_Porca"
+          },
+          "result": {
+            "document": "Fixador_sextavada_1794500855167447900",
+            "name": "Fixador_Porca",
+            "label": "Porca - Parafuso e porca",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 662.4931557797491,
+            "bounding_box": {
+              "min": [
+                15.494446500534865,
+                -6.5,
+                0.0
+              ],
+              "max": [
+                30.505553499465137,
+                6.500000000000001,
+                6.500000000000001
+              ],
+              "size": [
+                15.011106998930272,
+                13.0,
+                6.500000000000001
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

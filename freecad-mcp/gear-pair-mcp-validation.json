@@ -1,0 +1,1575 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "transport": "stdio",
+      "ratio": "2:1",
+      "prefix": "conjuntos_engrenagens/Reducao_1794500874682644000",
+      "calls": [
+        {
+          "tool": "new_document",
+          "arguments": {
+            "name": "Reducao_1794500874682644000"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000"
+          }
+        },
+        {
+          "tool": "generate_gear_pair",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto",
+            "ratio": "2:1"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "group": "Conjunto",
+            "parameter_object": "Conjunto_Parametros",
+            "objects": [
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_EngrenagemEntrada",
+                "label": "EngrenagemEntrada - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 11778.223373461802,
+                "bounding_box": {
+                  "min": [
+                    -22.000246446660285,
+                    -22.000246446660285,
+                    0.0
+                  ],
+                  "max": [
+                    22.000246446660285,
+                    22.000246446660285,
+                    10.0
+                  ],
+                  "size": [
+                    44.00049289332057,
+                    44.00049289332057,
+                    10.0
+                  ]
+                }
+              },
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_EixoEntrada",
+                "label": "EixoEntrada - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 1507.9644737231006,
+                "bounding_box": {
+                  "min": [
+                    -4.0,
+                    -3.9708354963922172,
+                    -10.0
+                  ],
+                  "max": [
+                    4.0,
+                    3.970835496392216,
+                    20.0
+                  ],
+                  "size": [
+                    8.0,
+                    7.941670992784433,
+                    30.0
+                  ]
+                }
+              },
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_EngrenagemSaida",
+                "label": "EngrenagemSaida - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 49368.96013886693,
+                "bounding_box": {
+                  "min": [
+                    18.175647949731726,
+                    -41.92435205026828,
+                    0.0
+                  ],
+                  "max": [
+                    102.02435205026828,
+                    41.924352050268276,
+                    10.0
+                  ],
+                  "size": [
+                    83.84870410053655,
+                    83.84870410053657,
+                    10.0
+                  ]
+                }
+              },
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_EixoSaida",
+                "label": "EixoSaida - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 1507.9644737231006,
+                "bounding_box": {
+                  "min": [
+                    56.1,
+                    -3.9708354963922172,
+                    -10.0
+                  ],
+                  "max": [
+                    64.1,
+                    3.970835496392216,
+                    20.0
+                  ],
+                  "size": [
+                    7.999999999999993,
+                    7.941670992784433,
+                    30.0
+                  ]
+                }
+              },
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_Caixa",
+                "label": "Caixa - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 56492.129896167186,
+                "bounding_box": {
+                  "min": [
+                    -28.0,
+                    -48.0,
+                    -4.5
+                  ],
+                  "max": [
+                    108.1,
+                    48.0,
+                    11.5
+                  ],
+                  "size": [
+                    136.1,
+                    96.0,
+                    16.0
+                  ]
+                }
+              },
+              {
+                "document": "Reducao_1794500874682644000",
+                "name": "Conjunto_Tampa",
+                "label": "Tampa - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 39290.5298961672,
+                "bounding_box": {
+                  "min": [
+                    -28.0,
+                    63.0,
+                    10.5
+                  ],
+                  "max": [
+                    108.1,
+                    159.0,
+                    14.5
+                  ],
+                  "size": [
+                    136.1,
+                    96.0,
+                    4.0
+                  ]
+                }
+              }
+            ],
+            "transmission": {
+              "input_teeth": 20,
+              "output_teeth": 40,
+              "ratio": "2:1",
+              "mode": "Reducao",
+              "speed_multiplier": -0.5,
+              "center_distance": 60.1,
+              "nominal_center_distance": 60.0,
+              "input_pitch_diameter": 40.0,
+              "output_pitch_diameter": 80.0,
+              "input_tip_radius": 22.0,
+              "output_tip_radius": 42.0,
+              "bore": 8.2,
+              "input_angle": 0,
+              "output_angle": 4.5,
+              "contact_ratio": 1.5859728819079189
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EngrenagemEntrada"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EngrenagemEntrada",
+            "label": "EngrenagemEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 11778.223373461802,
+            "bounding_box": {
+              "min": [
+                -22.000246446660285,
+                -22.000246446660285,
+                0.0
+              ],
+              "max": [
+                22.000246446660285,
+                22.000246446660285,
+                10.0
+              ],
+              "size": [
+                44.00049289332057,
+                44.00049289332057,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EixoEntrada"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EixoEntrada",
+            "label": "EixoEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                -4.0,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                4.0,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                8.0,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EngrenagemSaida"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EngrenagemSaida",
+            "label": "EngrenagemSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 49368.96013886693,
+            "bounding_box": {
+              "min": [
+                18.175647949731726,
+                -41.92435205026828,
+                0.0
+              ],
+              "max": [
+                102.02435205026828,
+                41.924352050268276,
+                10.0
+              ],
+              "size": [
+                83.84870410053655,
+                83.84870410053657,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EixoSaida"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EixoSaida",
+            "label": "EixoSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                56.1,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                64.1,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                7.999999999999993,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_Caixa"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_Caixa",
+            "label": "Caixa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 56492.129896167186,
+            "bounding_box": {
+              "min": [
+                -28.0,
+                -48.0,
+                -4.5
+              ],
+              "max": [
+                108.1,
+                48.0,
+                11.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                16.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_Tampa"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_Tampa",
+            "label": "Tampa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 39290.5298961672,
+            "bounding_box": {
+              "min": [
+                -28.0,
+                63.0,
+                10.5
+              ],
+              "max": [
+                108.1,
+                159.0,
+                14.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                4.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "set_view",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "view": "isometric"
+          },
+          "result": {
+            "view": "isometric"
+          }
+        },
+        {
+          "tool": "fit_all",
+          "arguments": {
+            "document": "Reducao_1794500874682644000"
+          },
+          "result": {
+            "view": "fit_all"
+          }
+        },
+        {
+          "tool": "capture_view",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000.png",
+            "width": 1500,
+            "height": 1000
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000.png",
+            "bytes": 28805
+          }
+        },
+        {
+          "tool": "save_fcstd",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000.FCStd"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000.FCStd",
+            "bytes": 195946
+          }
+        },
+        {
+          "tool": "export_step",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada",
+              "Conjunto_EixoEntrada",
+              "Conjunto_EngrenagemSaida",
+              "Conjunto_EixoSaida",
+              "Conjunto_Caixa",
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000.step"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000.step",
+            "bytes": 1045704
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada",
+              "Conjunto_EixoEntrada",
+              "Conjunto_EngrenagemSaida",
+              "Conjunto_EixoSaida",
+              "Conjunto_Caixa",
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000.stl",
+            "bytes": 1277684
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_EngrenagemEntrada.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_EngrenagemEntrada.stl",
+            "bytes": 433284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EixoEntrada"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_EixoEntrada.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_EixoEntrada.stl",
+            "bytes": 5084
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EngrenagemSaida"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_EngrenagemSaida.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_EngrenagemSaida.stl",
+            "bytes": 729284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_EixoSaida"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_EixoSaida.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_EixoSaida.stl",
+            "bytes": 5084
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_Caixa"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_Caixa.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_Caixa.stl",
+            "bytes": 52284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_names": [
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000_Conjunto_Tampa.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Reducao_1794500874682644000_Conjunto_Tampa.stl",
+            "bytes": 53084
+          }
+        },
+        {
+          "tool": "close_document",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "discard": true
+          },
+          "result": {
+            "closed": "Reducao_1794500874682644000"
+          }
+        },
+        {
+          "tool": "open_document",
+          "arguments": {
+            "filename": "conjuntos_engrenagens/Reducao_1794500874682644000.FCStd"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "objects": 8
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EngrenagemEntrada"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EngrenagemEntrada",
+            "label": "EngrenagemEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 11778.223373461798,
+            "bounding_box": {
+              "min": [
+                -22.000246446660285,
+                -22.000246446660285,
+                0.0
+              ],
+              "max": [
+                22.000246446660285,
+                22.000246446660285,
+                10.0
+              ],
+              "size": [
+                44.00049289332057,
+                44.00049289332057,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EixoEntrada"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EixoEntrada",
+            "label": "EixoEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                -4.0,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                4.0,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                8.0,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EngrenagemSaida"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EngrenagemSaida",
+            "label": "EngrenagemSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 49368.96013886695,
+            "bounding_box": {
+              "min": [
+                18.175647949731726,
+                -41.924352050268276,
+                0.0
+              ],
+              "max": [
+                102.02435205026828,
+                41.92435205026828,
+                10.0
+              ],
+              "size": [
+                83.84870410053655,
+                83.84870410053657,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_EixoSaida"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_EixoSaida",
+            "label": "EixoSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                56.1,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                64.1,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                7.999999999999993,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_Caixa"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_Caixa",
+            "label": "Caixa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 56492.129896167186,
+            "bounding_box": {
+              "min": [
+                -28.0,
+                -48.0,
+                -4.5
+              ],
+              "max": [
+                108.1,
+                48.0,
+                11.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                16.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Reducao_1794500874682644000",
+            "object_name": "Conjunto_Tampa"
+          },
+          "result": {
+            "document": "Reducao_1794500874682644000",
+            "name": "Conjunto_Tampa",
+            "label": "Tampa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 39290.5298961672,
+            "bounding_box": {
+              "min": [
+                -28.0,
+                63.0,
+                10.5
+              ],
+              "max": [
+                108.1,
+                159.0,
+                14.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                4.0
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transport": "streamable-http",
+      "ratio": "1:2",
+      "prefix": "conjuntos_engrenagens/Aumento_1794500891435557600",
+      "calls": [
+        {
+          "tool": "new_document",
+          "arguments": {
+            "name": "Aumento_1794500891435557600"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600"
+          }
+        },
+        {
+          "tool": "generate_gear_pair",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto",
+            "ratio": "1:2"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "group": "Conjunto",
+            "parameter_object": "Conjunto_Parametros",
+            "objects": [
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_EngrenagemEntrada",
+                "label": "EngrenagemEntrada - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 49368.96013886691,
+                "bounding_box": {
+                  "min": [
+                    -41.99992960251763,
+                    -41.99992960251763,
+                    0.0
+                  ],
+                  "max": [
+                    41.99992960251763,
+                    41.99992960251763,
+                    10.0
+                  ],
+                  "size": [
+                    83.99985920503526,
+                    83.99985920503526,
+                    10.0
+                  ]
+                }
+              },
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_EixoEntrada",
+                "label": "EixoEntrada - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 1507.9644737231006,
+                "bounding_box": {
+                  "min": [
+                    -4.0,
+                    -3.9708354963922172,
+                    -10.0
+                  ],
+                  "max": [
+                    4.0,
+                    3.970835496392216,
+                    20.0
+                  ],
+                  "size": [
+                    8.0,
+                    7.941670992784433,
+                    30.0
+                  ]
+                }
+              },
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_EngrenagemSaida",
+                "label": "EngrenagemSaida - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 11778.223373461797,
+                "bounding_box": {
+                  "min": [
+                    38.2709504544338,
+                    -21.829049545566182,
+                    0.0
+                  ],
+                  "max": [
+                    81.92904954556619,
+                    21.829049545566182,
+                    10.0
+                  ],
+                  "size": [
+                    43.658099091132385,
+                    43.658099091132364,
+                    10.0
+                  ]
+                }
+              },
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_EixoSaida",
+                "label": "EixoSaida - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 1507.9644737231006,
+                "bounding_box": {
+                  "min": [
+                    56.1,
+                    -3.9708354963922172,
+                    -10.0
+                  ],
+                  "max": [
+                    64.1,
+                    3.970835496392216,
+                    20.0
+                  ],
+                  "size": [
+                    7.999999999999993,
+                    7.941670992784433,
+                    30.0
+                  ]
+                }
+              },
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_Caixa",
+                "label": "Caixa - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 56492.129896167186,
+                "bounding_box": {
+                  "min": [
+                    -48.0,
+                    -48.0,
+                    -4.5
+                  ],
+                  "max": [
+                    88.1,
+                    48.0,
+                    11.5
+                  ],
+                  "size": [
+                    136.1,
+                    96.0,
+                    16.0
+                  ]
+                }
+              },
+              {
+                "document": "Aumento_1794500891435557600",
+                "name": "Conjunto_Tampa",
+                "label": "Tampa - Conjunto de engrenagens",
+                "type": "Part::FeaturePython",
+                "valid": true,
+                "solids": 1,
+                "volume_mm3": 39290.529896167194,
+                "bounding_box": {
+                  "min": [
+                    -48.0,
+                    63.0,
+                    10.5
+                  ],
+                  "max": [
+                    88.1,
+                    159.0,
+                    14.5
+                  ],
+                  "size": [
+                    136.1,
+                    96.0,
+                    4.0
+                  ]
+                }
+              }
+            ],
+            "transmission": {
+              "input_teeth": 40,
+              "output_teeth": 20,
+              "ratio": "1:2",
+              "mode": "Aumento",
+              "speed_multiplier": -2.0,
+              "center_distance": 60.1,
+              "nominal_center_distance": 60.0,
+              "input_pitch_diameter": 80.0,
+              "output_pitch_diameter": 40.0,
+              "input_tip_radius": 42.0,
+              "output_tip_radius": 22.0,
+              "bore": 8.2,
+              "input_angle": 0,
+              "output_angle": 9.0,
+              "contact_ratio": 1.5859728819079189
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EngrenagemEntrada"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EngrenagemEntrada",
+            "label": "EngrenagemEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 49368.96013886691,
+            "bounding_box": {
+              "min": [
+                -41.99992960251763,
+                -41.99992960251763,
+                0.0
+              ],
+              "max": [
+                41.99992960251763,
+                41.99992960251763,
+                10.0
+              ],
+              "size": [
+                83.99985920503526,
+                83.99985920503526,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EixoEntrada"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EixoEntrada",
+            "label": "EixoEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                -4.0,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                4.0,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                8.0,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EngrenagemSaida"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EngrenagemSaida",
+            "label": "EngrenagemSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 11778.223373461797,
+            "bounding_box": {
+              "min": [
+                38.2709504544338,
+                -21.829049545566182,
+                0.0
+              ],
+              "max": [
+                81.92904954556619,
+                21.829049545566182,
+                10.0
+              ],
+              "size": [
+                43.658099091132385,
+                43.658099091132364,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EixoSaida"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EixoSaida",
+            "label": "EixoSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                56.1,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                64.1,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                7.999999999999993,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_Caixa"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_Caixa",
+            "label": "Caixa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 56492.129896167186,
+            "bounding_box": {
+              "min": [
+                -48.0,
+                -48.0,
+                -4.5
+              ],
+              "max": [
+                88.1,
+                48.0,
+                11.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                16.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_Tampa"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_Tampa",
+            "label": "Tampa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 39290.529896167194,
+            "bounding_box": {
+              "min": [
+                -48.0,
+                63.0,
+                10.5
+              ],
+              "max": [
+                88.1,
+                159.0,
+                14.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                4.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "set_view",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "view": "isometric"
+          },
+          "result": {
+            "view": "isometric"
+          }
+        },
+        {
+          "tool": "fit_all",
+          "arguments": {
+            "document": "Aumento_1794500891435557600"
+          },
+          "result": {
+            "view": "fit_all"
+          }
+        },
+        {
+          "tool": "capture_view",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600.png",
+            "width": 1500,
+            "height": 1000
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600.png",
+            "bytes": 28393
+          }
+        },
+        {
+          "tool": "save_fcstd",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600.FCStd"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600.FCStd",
+            "bytes": 194701
+          }
+        },
+        {
+          "tool": "export_step",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada",
+              "Conjunto_EixoEntrada",
+              "Conjunto_EngrenagemSaida",
+              "Conjunto_EixoSaida",
+              "Conjunto_Caixa",
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600.step"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600.step",
+            "bytes": 1046715
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada",
+              "Conjunto_EixoEntrada",
+              "Conjunto_EngrenagemSaida",
+              "Conjunto_EixoSaida",
+              "Conjunto_Caixa",
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600.stl",
+            "bytes": 1277684
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EngrenagemEntrada"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_EngrenagemEntrada.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_EngrenagemEntrada.stl",
+            "bytes": 729284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EixoEntrada"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_EixoEntrada.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_EixoEntrada.stl",
+            "bytes": 5084
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EngrenagemSaida"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_EngrenagemSaida.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_EngrenagemSaida.stl",
+            "bytes": 433284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_EixoSaida"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_EixoSaida.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_EixoSaida.stl",
+            "bytes": 5084
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_Caixa"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_Caixa.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_Caixa.stl",
+            "bytes": 52284
+          }
+        },
+        {
+          "tool": "export_stl",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_names": [
+              "Conjunto_Tampa"
+            ],
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600_Conjunto_Tampa.stl"
+          },
+          "result": {
+            "path": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\conjuntos_engrenagens\\Aumento_1794500891435557600_Conjunto_Tampa.stl",
+            "bytes": 53084
+          }
+        },
+        {
+          "tool": "close_document",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "discard": true
+          },
+          "result": {
+            "closed": "Aumento_1794500891435557600"
+          }
+        },
+        {
+          "tool": "open_document",
+          "arguments": {
+            "filename": "conjuntos_engrenagens/Aumento_1794500891435557600.FCStd"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "objects": 8
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EngrenagemEntrada"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EngrenagemEntrada",
+            "label": "EngrenagemEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 49368.960138866925,
+            "bounding_box": {
+              "min": [
+                -41.99992960251763,
+                -41.99992960251763,
+                0.0
+              ],
+              "max": [
+                41.99992960251763,
+                41.99992960251763,
+                10.0
+              ],
+              "size": [
+                83.99985920503526,
+                83.99985920503526,
+                10.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EixoEntrada"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EixoEntrada",
+            "label": "EixoEntrada - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                -4.0,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                4.0,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                8.0,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EngrenagemSaida"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EngrenagemSaida",
+            "label": "EngrenagemSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 11778.2233734618,
+            "bounding_box": {
+              "min": [
+                38.27095045443381,
+                -21.82904954556618,
+                0.0
+              ],
+              "max": [
+                81.92904954556619,
+                21.82904954556618,
+                10.000000000000002
+              ],
+              "size": [
+                43.65809909113238,
+                43.65809909113236,
+                10.000000000000002
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_EixoSaida"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_EixoSaida",
+            "label": "EixoSaida - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 1507.9644737231006,
+            "bounding_box": {
+              "min": [
+                56.1,
+                -3.9708354963922172,
+                -10.0
+              ],
+              "max": [
+                64.1,
+                3.970835496392216,
+                20.0
+              ],
+              "size": [
+                7.999999999999993,
+                7.941670992784433,
+                30.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_Caixa"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_Caixa",
+            "label": "Caixa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 56492.129896167186,
+            "bounding_box": {
+              "min": [
+                -48.0,
+                -48.0,
+                -4.5
+              ],
+              "max": [
+                88.1,
+                48.0,
+                11.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                16.0
+              ]
+            }
+          }
+        },
+        {
+          "tool": "validate_shape",
+          "arguments": {
+            "document": "Aumento_1794500891435557600",
+            "object_name": "Conjunto_Tampa"
+          },
+          "result": {
+            "document": "Aumento_1794500891435557600",
+            "name": "Conjunto_Tampa",
+            "label": "Tampa - Conjunto de engrenagens",
+            "type": "Part::FeaturePython",
+            "valid": true,
+            "solids": 1,
+            "volume_mm3": 39290.529896167194,
+            "bounding_box": {
+              "min": [
+                -48.0,
+                63.0,
+                10.5
+              ],
+              "max": [
+                88.1,
+                159.0,
+                14.5
+              ],
+              "size": [
+                136.1,
+                96.0,
+                4.0
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

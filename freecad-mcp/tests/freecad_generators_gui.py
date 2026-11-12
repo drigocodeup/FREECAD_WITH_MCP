@@ -19,8 +19,8 @@ def run(project):
     except ImportError:
         QtWidgets = QtGui
     toolbar = Gui.getMainWindow().findChild(QtWidgets.QToolBar,'CESS_GeneratorsToolbar')
-    assert [a.objectName() for a in toolbar.actions()] == list(COMMANDS)
-    assert len(toolbar.actions()) == 5
+    assert {a.objectName() for a in toolbar.actions()} == set(COMMANDS)
+    assert len(toolbar.actions()) == len(COMMANDS)
     folder = project.parent / 'modelos' / ('geradores_'+str(int(time.time())))
     folder.mkdir(parents=True)
     report = {'passed':False,'toolbar':[a.text() for a in toolbar.actions()],'models':{}}

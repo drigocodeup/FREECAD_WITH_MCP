@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "head": "allen",
+      "left_hand": false,
+      "thread_faces": 88,
+      "overlaps_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step_solids": 2
+    },
+    {
+      "head": "allen",
+      "left_hand": true,
+      "thread_faces": 88,
+      "overlaps_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step_solids": 2
+    },
+    {
+      "head": "sextavada",
+      "left_hand": false,
+      "thread_faces": 86,
+      "overlaps_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step_solids": 2
+    },
+    {
+      "head": "sextavada",
+      "left_hand": true,
+      "thread_faces": 86,
+      "overlaps_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step_solids": 2
+    }
+  ],
+  "parametric_edit_and_reopen": true
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "parameters": {
+    "head_type": "allen",
+    "diameter": 6.0,
+    "pitch": 1.0,
+    "length": 20.0,
+    "head_size": 10.0,
+    "head_height": 6.0,
+    "socket_size": 5.0,
+    "socket_depth": 3.0,
+    "nut_size": 10.0,
+    "nut_height": 5.0,
+    "clearance": 0.25,
+    "left_hand": false
+  },
+  "assembled_intersection_mm3": 0.0,
+  "volumes_mm3": {
+    "Parafuso": 860.8472149590325,
+    "Porca": 308.60057725306814
+  }
+}

@@ -1,5 +1,7 @@
 # CESS — Geradores
 
+Agora são **sete geradores e 36 ferramentas MCP**. Os novos botões são **Conjunto de engrenagens**, com relação de redução/aumento e caixa com tampa, e **Parafuso e porca**, com cabeça Allen/sextavada e rosca helicoidal 3D real. Veja [conjuntos de engrenagens](GEAR_SETS.md) e [parafusos e porcas](FASTENERS.md). As seções abaixo registram os cinco geradores originais.
+
 Cinco geradores paramétricos locais para o FreeCAD instalado. Não precisam compilar o FreeCAD, instalar complementos externos ou baixar fontes. Abra com `Iniciar_FreeCAD_CESS.cmd` para carregar as barras CESS e o bridge MCP.
 
 ## Usar e editar

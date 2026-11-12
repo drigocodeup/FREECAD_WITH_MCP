@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "toolbar_command": "CESS_ConjuntoEngrenagens",
+  "input_teeth": 20,
+  "output_teeth": 40,
+  "center_distance_mm": 60.1,
+  "parts": [
+    "GeradorCESS_EngrenagemEntrada",
+    "GeradorCESS_EixoEntrada",
+    "GeradorCESS_EngrenagemSaida",
+    "GeradorCESS_EixoSaida",
+    "GeradorCESS_Caixa",
+    "GeradorCESS_Tampa"
+  ],
+  "invalid_ratio_rejected": true
+}
