@@ -1,0 +1,76 @@
+﻿{
+    "papers":  [
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A0_portrait.pdf",
+                       "page_count":  1,
+                       "width_mm":  841.02224375406888,
+                       "height_mm":  1188.8611541748046,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A0_portrait.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A0_landscape.pdf",
+                       "page_count":  1,
+                       "width_mm":  1188.8611541748046,
+                       "height_mm":  841.02224375406888,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A0_landscape.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A1_portrait.pdf",
+                       "page_count":  1,
+                       "width_mm":  594.07782084147129,
+                       "height_mm":  841.02224375406888,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A1_portrait.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A1_landscape.pdf",
+                       "page_count":  1,
+                       "width_mm":  841.02224375406888,
+                       "height_mm":  594.07782084147129,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A1_landscape.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A2_portrait.pdf",
+                       "page_count":  1,
+                       "width_mm":  420.1583333333333,
+                       "height_mm":  594.07782084147129,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A2_portrait.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A2_landscape.pdf",
+                       "page_count":  1,
+                       "width_mm":  594.07782084147129,
+                       "height_mm":  420.1583333333333,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A2_landscape.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A3_portrait.pdf",
+                       "page_count":  1,
+                       "width_mm":  297.03891042073565,
+                       "height_mm":  420.1583333333333,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A3_portrait.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A3_landscape.pdf",
+                       "page_count":  1,
+                       "width_mm":  420.1583333333333,
+                       "height_mm":  297.03891042073565,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A3_landscape.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A4_portrait.pdf",
+                       "page_count":  1,
+                       "width_mm":  209.90278854370115,
+                       "height_mm":  297.03891042073565,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A4_portrait.pdf.png"
+                   },
+                   {
+                       "pdf":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A4_landscape.pdf",
+                       "page_count":  1,
+                       "width_mm":  297.03891042073565,
+                       "height_mm":  209.90278854370115,
+                       "png":  "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\eletrica_validacao_1794525725717885200\\A4_landscape.pdf.png"
+                   }
+               ],
+    "tolerance_mm":  0.3,
+    "passed":  true
+}

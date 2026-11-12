@@ -165,6 +165,8 @@ class DraftCommand:
 
 
 def install():
+    from cess_gui.electrical_editor import install as install_electrical
+    install_electrical()
     from cess_gui.generator_dialog import install as install_generators
     install_generators()
     window = Gui.getMainWindow()

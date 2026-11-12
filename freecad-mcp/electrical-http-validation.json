@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "transport": "http",
+  "calls": [
+    "electrical_catalog",
+    "new_document",
+    "electrical_create_sheet",
+    "electrical_add_symbol",
+    "electrical_add_symbol",
+    "electrical_add_wire",
+    "electrical_get_sheet",
+    "electrical_update_sheet",
+    "electrical_get_sheet",
+    "electrical_export_sheet",
+    "electrical_export_sheet",
+    "electrical_export_sheet",
+    "electrical_export_sheet",
+    "save_fcstd",
+    "close_document",
+    "open_document",
+    "electrical_get_sheet",
+    "close_document"
+  ],
+  "outputs": [
+    "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\Eletrica_http_1794527455866493900.pdf",
+    "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\Eletrica_http_1794527455866493900.svg",
+    "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\Eletrica_http_1794527455866493900.png",
+    "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\Eletrica_http_1794527455866493900.json"
+  ]
+}

@@ -1,6 +1,6 @@
 """Single tool catalog shared by the STDIO and Streamable HTTP entry points."""
 from mcp.server.fastmcp import FastMCP
-from tools import documents, primitives, boolean, transformations, inspection, exporters, visualization, generators
+from tools import documents, primitives, boolean, transformations, inspection, exporters, visualization, generators, electrical
 
 INSTRUCTIONS = ('Controle local do FreeCAD em mm. Inicie o bridge antes das chamadas. '
                 'Use os nomes Name retornados. Salve/exporte somente em modelos. '
@@ -10,6 +10,6 @@ INSTRUCTIONS = ('Controle local do FreeCAD em mm. Inicie o bridge antes das cham
 
 def create_server(**settings):
     server = FastMCP('freecad_local',instructions=INSTRUCTIONS,**settings)
-    for module in (documents,primitives,boolean,transformations,inspection,exporters,visualization,generators):
+    for module in (documents,primitives,boolean,transformations,inspection,exporters,visualization,generators,electrical):
         module.register(server)
     return server

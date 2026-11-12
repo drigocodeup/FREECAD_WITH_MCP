@@ -1,6 +1,6 @@
 # Codex local e ChatGPT Web
 
-Os dois servidores usam `application.create_server()` e as mesmas 36 ferramentas, esquemas, validações e bridge Qt. `server.py` continua sendo a entrada STDIO existente. `server_http.py` usa Streamable HTTP do SDK oficial `mcp` 1.x, com respostas JSON e sessões sem estado. O estado dos documentos permanece no FreeCAD gráfico.
+Os dois servidores usam `application.create_server()` e as mesmas 43 ferramentas, esquemas, validações e bridge Qt. `server.py` continua sendo a entrada STDIO existente. `server_http.py` usa Streamable HTTP do SDK oficial `mcp` 1.x, com respostas JSON e sessões sem estado. O estado dos documentos permanece no FreeCAD gráfico.
 
 ## Instalar e iniciar o FreeCAD
 

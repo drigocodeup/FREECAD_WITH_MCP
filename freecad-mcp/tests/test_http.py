@@ -152,7 +152,7 @@ def test_real_http_protocol_matches_stdio():
                     async with ClientSession(r,w) as session:
                         await session.initialize()
                         remote = await session.list_tools()
-                        assert len(remote.tools) == 36
+                        assert len(remote.tools) == 43
                         assert [t.model_dump() for t in remote.tools] == [t.model_dump() for t in local.tools]
                         invalid = await session.call_tool('freecad_create_box',{'document':'Missing'})
                         assert invalid.isError
@@ -200,7 +200,7 @@ def test_powershell_stdio_launcher():
         async with stdio_client(params) as (r,w):
             async with ClientSession(r,w) as session:
                 await session.initialize()
-                assert len((await session.list_tools()).tools)==36
+                assert len((await session.list_tools()).tools)==43
     asyncio.run(run())
 
 

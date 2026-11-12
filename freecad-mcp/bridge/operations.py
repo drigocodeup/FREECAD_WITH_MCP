@@ -22,7 +22,9 @@ class Operations:
             'get_bounding_box', 'get_volume', 'validate_shape', 'export_step',
             'export_stl', 'save_fcstd', 'fit_all', 'set_view', 'capture_view',
             'generate_gear', 'generate_gear_pair', 'generate_fastener', 'generate_box_with_lid', 'generate_channel_letters',
-            'generate_channel_numbers', 'generate_organizer')}
+            'generate_channel_numbers', 'generate_organizer',
+            'electrical_catalog','electrical_create_sheet','electrical_get_sheet','electrical_update_sheet',
+            'electrical_add_symbol','electrical_add_wire','electrical_export_sheet')}
 
     def dispatch(self, operation, params):
         if operation not in self.allowed:
@@ -71,6 +73,46 @@ class Operations:
         return {'document':document, 'group':result['group'].Name,
                 'parameter_object':result['parameters'].Name,
                 'objects':[self.info(o) for o in result['objects'] if not o.Shape.isNull()]}
+
+    def electrical_catalog(self):
+        from cess_gui.electrical_symbols import catalog
+        return {'symbols':catalog(),'units':'mm','simulation':False,'papers':['A0','A1','A2','A3','A4']}
+
+    def electrical_create_sheet(self,document,name,paper='A3',orientation='landscape',title='Projeto eletrico',
+                                company='',project='',author=''):
+        from cess_gui.electrical_model import new_drawing
+        from cess_gui.electrical_project import create_sheet,sheet_info
+        self.unused(document,name)
+        model=new_drawing(paper,orientation,dict(title=title,company=company,project=project,author=author))
+        return sheet_info(create_sheet(self.doc(document),name,model))
+
+    def electrical_get_sheet(self,document,sheet):
+        from cess_gui.electrical_project import sheet_info
+        self.doc(document).recompute()
+        return sheet_info(self.obj(document,sheet))
+
+    def electrical_update_sheet(self,document,sheet,drawing):
+        from cess_gui.electrical_project import apply_model
+        return apply_model(self.obj(document,sheet),drawing)
+
+    def electrical_add_symbol(self,document,sheet,kind,x,y,tag='',rotation=0,description=''):
+        from cess_gui.electrical_model import add_symbol
+        from cess_gui.electrical_project import apply_model,read_model
+        obj=self.obj(document,sheet);model,item_id=add_symbol(read_model(obj),kind,x,y,tag,rotation,description)
+        return {**apply_model(obj,model,'Inserir simbolo eletrico'),'symbol_id':item_id}
+
+    def electrical_add_wire(self,document,sheet,start,end,label='',waypoints=None,color='#111111'):
+        from cess_gui.electrical_model import add_wire
+        from cess_gui.electrical_project import apply_model,read_model
+        obj=self.obj(document,sheet);model,item_id=add_wire(read_model(obj),start,end,label,waypoints,color)
+        return {**apply_model(obj,model,'Inserir fio eletrico'),'wire_id':item_id}
+
+    def electrical_export_sheet(self,document,sheet,filename,overwrite=False):
+        from cess_gui.electrical_project import export_sheet
+        suffix=Path(filename).suffix.lower()
+        if suffix not in ('.pdf','.svg','.png','.json'):raise ValueError('Use PDF, SVG, PNG ou JSON.')
+        path=safe_path(self.root,filename,suffix);self.prepare_file(path,overwrite)
+        return export_sheet(self.obj(document,sheet),path)
 
     def generate_gear(self, document, name, teeth=24, module=2, pressure_angle=20, thickness=10, bore=8):
         return self.generated('gear',document,name,dict(teeth=teeth,module=module,pressure_angle=pressure_angle,

@@ -1,10 +1,12 @@
 # FreeCAD with MCP
 
+Novo módulo **CESS — Elétrica**: diagramas com 17 símbolos de comando, fios, textos e prancha A0 a A4 com carimbo editável. [Como usar](freecad-mcp/cess_gui/ELECTRICAL.md) · [Exemplo FCStd](modelos/eletrica/comando_contator.FCStd) · [Prancha PDF](modelos/eletrica/comando_contator.pdf). Somente desenho, sem simulação.
+
 Novos geradores: [conjunto de engrenagens com dois eixos, caixa e tampa](freecad-mcp/cess_gui/GEAR_SETS.md), configurado por relação entrada:saída, e [parafuso/porca com cabeça Allen ou sextavada e rosca 3D real](freecad-mcp/cess_gui/FASTENERS.md). Ambos têm janela de parâmetros e ferramentas MCP nos dois transportes.
 
-Dois transportes compartilham as mesmas 36 ferramentas: **STDIO** para Codex/VS Code e **Streamable HTTP autenticado** para clientes remotos. O HTTP usa localhost por padrão; a preparação para ChatGPT Web inclui OAuth externo e Secure MCP Tunnel, sem publicação automática. Consulte [instalação, segurança e integração com ChatGPT](freecad-mcp/docs/TRANSPORTS.md).
+Dois transportes compartilham as mesmas 43 ferramentas: **STDIO** para Codex/VS Code e **Streamable HTTP autenticado** para clientes remotos. O HTTP usa localhost por padrão; a preparação para ChatGPT Web inclui OAuth externo e Secure MCP Tunnel, sem publicação automática. Consulte [instalação, segurança e integração com ChatGPT](freecad-mcp/docs/TRANSPORTS.md).
 
-Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 36 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
+Integração local para controlar o FreeCAD por linguagem natural usando Codex e o protocolo MCP. Para Windows, com 43 ferramentas para documentos, sólidos, booleanas, transformações, inspeção, geradores, exportação e captura da vista.
 
 Inclui também a barra **CESS — Desenho**, com os botões **Centralizar**, **Colocar cotas** e **Inserir texto**. [Como usar a barra](freecad-mcp/cess_gui/README.md).
 

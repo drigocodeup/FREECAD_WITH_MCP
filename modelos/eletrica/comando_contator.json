@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "paper": "A3",
+  "orientation": "landscape",
+  "grid": 5.0,
+  "metadata": {
+    "company": "SENAI / CESS",
+    "title": "Comando de contator - partida e parada com selo",
+    "project": "ELE-001",
+    "author": "",
+    "checked": "",
+    "revision": "0",
+    "date": "2026-11-12",
+    "sheet": "1",
+    "sheets": "1"
+  },
+  "symbols": [
+    {
+      "id": "C1",
+      "kind": "terminal",
+      "tag": "L+",
+      "description": "24 Vcc",
+      "x": 60.0,
+      "y": 35.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C2",
+      "kind": "fuse",
+      "tag": "F1",
+      "description": "Protecao",
+      "x": 60.0,
+      "y": 55.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C3",
+      "kind": "push_nc",
+      "tag": "S0",
+      "description": "Desliga",
+      "x": 60.0,
+      "y": 85.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C4",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 60.0,
+      "y": 110.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C5",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 100.0,
+      "y": 110.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C6",
+      "kind": "push_no",
+      "tag": "S1",
+      "description": "Liga",
+      "x": 60.0,
+      "y": 135.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C7",
+      "kind": "contact_no",
+      "tag": "KM1",
+      "description": "Selo",
+      "x": 100.0,
+      "y": 135.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C8",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 60.0,
+      "y": 160.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C9",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 100.0,
+      "y": 160.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C10",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 140.0,
+      "y": 160.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C11",
+      "kind": "coil",
+      "tag": "KM1",
+      "description": "Contator",
+      "x": 60.0,
+      "y": 185.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C12",
+      "kind": "lamp",
+      "tag": "H1",
+      "description": "Ligado",
+      "x": 140.0,
+      "y": 185.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C13",
+      "kind": "junction",
+      "tag": "",
+      "description": "",
+      "x": 140.0,
+      "y": 215.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C14",
+      "kind": "terminal",
+      "tag": "0V",
+      "description": "Retorno",
+      "x": 60.0,
+      "y": 215.0,
+      "rotation": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "W1",
+      "start": {
+        "symbol": "C1",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C2",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "1",
+      "color": "#111111"
+    },
+    {
+      "id": "W2",
+      "start": {
+        "symbol": "C2",
+        "pin": "2"
+      },
+      "end": {
+        "symbol": "C3",
+        "pin": "11"
+      },
+      "waypoints": [],
+      "label": "2",
+      "color": "#111111"
+    },
+    {
+      "id": "W3",
+      "start": {
+        "symbol": "C3",
+        "pin": "12"
+      },
+      "end": {
+        "symbol": "C4",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "3",
+      "color": "#111111"
+    },
+    {
+      "id": "W4",
+      "start": {
+        "symbol": "C4",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C6",
+        "pin": "13"
+      },
+      "waypoints": [],
+      "label": "4",
+      "color": "#111111"
+    },
+    {
+      "id": "W5",
+      "start": {
+        "symbol": "C4",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C5",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "5",
+      "color": "#111111"
+    },
+    {
+      "id": "W6",
+      "start": {
+        "symbol": "C5",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C7",
+        "pin": "13"
+      },
+      "waypoints": [],
+      "label": "6",
+      "color": "#111111"
+    },
+    {
+      "id": "W7",
+      "start": {
+        "symbol": "C6",
+        "pin": "14"
+      },
+      "end": {
+        "symbol": "C8",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "7",
+      "color": "#111111"
+    },
+    {
+      "id": "W8",
+      "start": {
+        "symbol": "C7",
+        "pin": "14"
+      },
+      "end": {
+        "symbol": "C9",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "8",
+      "color": "#111111"
+    },
+    {
+      "id": "W9",
+      "start": {
+        "symbol": "C8",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C9",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "9",
+      "color": "#111111"
+    },
+    {
+      "id": "W10",
+      "start": {
+        "symbol": "C9",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C10",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "10",
+      "color": "#111111"
+    },
+    {
+      "id": "W11",
+      "start": {
+        "symbol": "C8",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C11",
+        "pin": "A1"
+      },
+      "waypoints": [],
+      "label": "11",
+      "color": "#111111"
+    },
+    {
+      "id": "W12",
+      "start": {
+        "symbol": "C10",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C12",
+        "pin": "X1"
+      },
+      "waypoints": [],
+      "label": "12",
+      "color": "#111111"
+    },
+    {
+      "id": "W13",
+      "start": {
+        "symbol": "C11",
+        "pin": "A2"
+      },
+      "end": {
+        "symbol": "C14",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "13",
+      "color": "#111111"
+    },
+    {
+      "id": "W14",
+      "start": {
+        "symbol": "C12",
+        "pin": "X2"
+      },
+      "end": {
+        "symbol": "C13",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "14",
+      "color": "#111111"
+    },
+    {
+      "id": "W15",
+      "start": {
+        "symbol": "C14",
+        "pin": "1"
+      },
+      "end": {
+        "symbol": "C13",
+        "pin": "1"
+      },
+      "waypoints": [],
+      "label": "15",
+      "color": "#111111"
+    }
+  ],
+  "notes": [
+    {
+      "id": "N1",
+      "text": "COMANDO DE CONTATOR\nPartida, parada e contato de selo",
+      "x": 195.0,
+      "y": 45.0,
+      "size": 3.0
+    },
+    {
+      "id": "N2",
+      "text": "S0 - Botoeira normalmente fechada\nS1 - Botoeira normalmente aberta\nKM1 - Bobina e contato auxiliar\nH1 - Sinaleiro",
+      "x": 195.0,
+      "y": 75.0,
+      "size": 2.5
+    }
+  ]
+}

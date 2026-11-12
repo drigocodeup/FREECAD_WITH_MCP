@@ -1,0 +1,20 @@
+﻿{
+    "full_regression":  {
+                            "offset":  "0x2d3555",
+                            "exception":  "0xc0000409",
+                            "tests":  "123",
+                            "failures":  "4",
+                            "module":  "UIAutomationCore.DLL",
+                            "skipped":  "1",
+                            "status":  "native FreeCAD crash"
+                        },
+    "targeted":  {
+                     "excluded":  [
+                                      "test_gear_pair_mcp.py",
+                                      "test_generators_mcp.py"
+                                  ],
+                     "skipped":  "1",
+                     "tests":  "121",
+                     "failures":  "0"
+                 }
+}

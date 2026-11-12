@@ -14,7 +14,7 @@ def test_real_stdio_catalog_and_validation():
             async with ClientSession(reader, writer) as session:
                 await session.initialize()
                 catalog = await session.list_tools()
-                assert len(catalog.tools) == 36
+                assert len(catalog.tools) == 43
                 assert any(t.name == 'freecad_generate_fastener' for t in catalog.tools)
                 assert any(t.name == 'freecad_generate_gear_pair' for t in catalog.tools)
                 assert any(t.name == 'freecad_generate_gear' for t in catalog.tools)
