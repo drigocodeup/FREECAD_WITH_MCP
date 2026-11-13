@@ -68,6 +68,11 @@ def run(project):
     actual=read_model(obj);assert actual['symbols'][0]['x']==100
     assert wire_points(actual,actual['wires'][0])[0]==[100,90]
     editor.undo();assert read_model(obj)['symbols'][0]['x']==80
+    palette('timer_on_changeover');click(160,80);assert obj.SymbolCount==3
+    palette('limit_no_nc');click(160,140);assert obj.SymbolCount==4
+    next(b for b in editor.findChildren(QtWidgets.QPushButton) if b.text()=='Fio (2 pontos)').click()
+    click(160,70);click(156,130);assert obj.WireCount==2
+    assert editor.library.count()==77
     editor.grab().save(str(folder/'editor_eletrica.png'))
     dialog=SheetDialog(read_model(obj));dialog.paper.setCurrentText('A4');dialog.orientation.setCurrentIndex(1)
     dialog.fields['title'].setText('Projeto de comando');dialog.apply()
@@ -84,6 +89,7 @@ def run(project):
     doc.undo();doc.recompute();assert read_model(obj)==original
     Gui.activeDocument().getObject(obj.PageName).show()
     report.update(passed=True,toolbar=True,mouse_insert_symbols=True,mouse_draw_wire=True,
+                  library_count=77,new_changeover_and_combined_contacts=True,
                   edit_move_relinks_wire=True,undo=True,carimbo_editable=True,fcstd_reopen=True,
                   example_fcstd=str(path),example_svg=str(folder/'exemplo_comando.svg'),
                   example_png=str(folder/'exemplo_comando.png'),editor_png=str(folder/'editor_eletrica.png'))

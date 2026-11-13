@@ -1,0 +1,1254 @@
+{
+  "version": 1,
+  "paper": "A0",
+  "orientation": "landscape",
+  "grid": 5.0,
+  "metadata": {
+    "company": "CESS",
+    "title": "Biblioteca de contatos 2D",
+    "project": "CAT-CONTATOS",
+    "author": "",
+    "checked": "",
+    "revision": "1",
+    "date": "2026-11-12",
+    "sheet": "1",
+    "sheets": "1"
+  },
+  "symbols": [
+    {
+      "id": "C1",
+      "kind": "contact_no",
+      "tag": "32937",
+      "description": "",
+      "x": 60.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C2",
+      "kind": "contact_nc",
+      "tag": "32938",
+      "description": "",
+      "x": 180.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C3",
+      "kind": "push_no",
+      "tag": "32909",
+      "description": "",
+      "x": 300.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C4",
+      "kind": "push_nc",
+      "tag": "32910",
+      "description": "",
+      "x": 420.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C5",
+      "kind": "emergency",
+      "tag": "32915",
+      "description": "",
+      "x": 540.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C6",
+      "kind": "selector",
+      "tag": "SA6",
+      "description": "",
+      "x": 660.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C7",
+      "kind": "coil",
+      "tag": "KM7",
+      "description": "",
+      "x": 780.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C8",
+      "kind": "timer_coil",
+      "tag": "KT8",
+      "description": "",
+      "x": 900.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C9",
+      "kind": "thermal_nc",
+      "tag": "32928",
+      "description": "",
+      "x": 1020.0,
+      "y": 65.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C10",
+      "kind": "fuse",
+      "tag": "F10",
+      "description": "",
+      "x": 60.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C11",
+      "kind": "breaker",
+      "tag": "QF11",
+      "description": "",
+      "x": 180.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C12",
+      "kind": "lamp",
+      "tag": "H12",
+      "description": "",
+      "x": 300.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C13",
+      "kind": "motor",
+      "tag": "M13",
+      "description": "",
+      "x": 420.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C14",
+      "kind": "resistor",
+      "tag": "R14",
+      "description": "",
+      "x": 540.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C15",
+      "kind": "terminal",
+      "tag": "X15",
+      "description": "",
+      "x": 660.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C16",
+      "kind": "junction",
+      "tag": "16",
+      "description": "",
+      "x": 780.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C17",
+      "kind": "ground",
+      "tag": "PE17",
+      "description": "",
+      "x": 900.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C18",
+      "kind": "contact_no_nc",
+      "tag": "32939",
+      "description": "",
+      "x": 1020.0,
+      "y": 150.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C19",
+      "kind": "contact_changeover",
+      "tag": "32940",
+      "description": "",
+      "x": 60.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C20",
+      "kind": "push_no_nc",
+      "tag": "32912",
+      "description": "",
+      "x": 180.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C21",
+      "kind": "push_changeover",
+      "tag": "32913",
+      "description": "",
+      "x": 300.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C22",
+      "kind": "mushroom_no",
+      "tag": "32914",
+      "description": "",
+      "x": 420.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C23",
+      "kind": "mushroom_no_nc",
+      "tag": "32917",
+      "description": "",
+      "x": 540.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C24",
+      "kind": "mushroom_changeover",
+      "tag": "32918",
+      "description": "",
+      "x": 660.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C25",
+      "kind": "switch_no",
+      "tag": "32919",
+      "description": "",
+      "x": 780.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C26",
+      "kind": "switch_nc",
+      "tag": "32920",
+      "description": "",
+      "x": 900.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C27",
+      "kind": "switch_no_nc",
+      "tag": "32921",
+      "description": "",
+      "x": 1020.0,
+      "y": 235.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C28",
+      "kind": "switch_changeover",
+      "tag": "32922",
+      "description": "",
+      "x": 60.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C29",
+      "kind": "limit_no",
+      "tag": "32923",
+      "description": "",
+      "x": 180.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C30",
+      "kind": "limit_nc",
+      "tag": "32924",
+      "description": "",
+      "x": 300.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C31",
+      "kind": "limit_no_nc",
+      "tag": "32925",
+      "description": "",
+      "x": 420.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C32",
+      "kind": "limit_changeover",
+      "tag": "32926",
+      "description": "",
+      "x": 540.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C33",
+      "kind": "thermal_no",
+      "tag": "32927",
+      "description": "",
+      "x": 660.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C34",
+      "kind": "thermal_no_nc",
+      "tag": "32929",
+      "description": "",
+      "x": 780.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C35",
+      "kind": "thermal_changeover",
+      "tag": "32930",
+      "description": "",
+      "x": 900.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C36",
+      "kind": "timer_on_no",
+      "tag": "32933",
+      "description": "",
+      "x": 1020.0,
+      "y": 320.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C37",
+      "kind": "timer_on_nc",
+      "tag": "32934",
+      "description": "",
+      "x": 60.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C38",
+      "kind": "timer_on_no_nc",
+      "tag": "32935",
+      "description": "",
+      "x": 180.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C39",
+      "kind": "timer_on_changeover",
+      "tag": "32936",
+      "description": "",
+      "x": 300.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C40",
+      "kind": "timer_off_no",
+      "tag": "32941",
+      "description": "",
+      "x": 420.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C41",
+      "kind": "timer_off_nc",
+      "tag": "32942",
+      "description": "",
+      "x": 540.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C42",
+      "kind": "timer_off_no_nc",
+      "tag": "32943",
+      "description": "",
+      "x": 660.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C43",
+      "kind": "timer_off_changeover",
+      "tag": "32944",
+      "description": "",
+      "x": 780.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C44",
+      "kind": "timer_on_off_no",
+      "tag": "32945",
+      "description": "",
+      "x": 900.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C45",
+      "kind": "timer_on_off_nc",
+      "tag": "32946",
+      "description": "",
+      "x": 1020.0,
+      "y": 405.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C46",
+      "kind": "timer_on_off_no_nc",
+      "tag": "32947",
+      "description": "",
+      "x": 60.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C47",
+      "kind": "timer_on_off_changeover",
+      "tag": "32948",
+      "description": "",
+      "x": 180.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C48",
+      "kind": "inductive_no",
+      "tag": "33032",
+      "description": "",
+      "x": 300.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C49",
+      "kind": "inductive_nc",
+      "tag": "33020",
+      "description": "",
+      "x": 420.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C50",
+      "kind": "capacitive_no",
+      "tag": "33021",
+      "description": "",
+      "x": 540.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C51",
+      "kind": "capacitive_nc",
+      "tag": "33022",
+      "description": "",
+      "x": 660.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C52",
+      "kind": "magnetic_no",
+      "tag": "33023",
+      "description": "",
+      "x": 780.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C53",
+      "kind": "magnetic_nc",
+      "tag": "33024",
+      "description": "",
+      "x": 900.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C54",
+      "kind": "pressure_no",
+      "tag": "33253",
+      "description": "",
+      "x": 1020.0,
+      "y": 490.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C55",
+      "kind": "pressure_nc",
+      "tag": "33254",
+      "description": "",
+      "x": 60.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C56",
+      "kind": "thermostat_no",
+      "tag": "33346",
+      "description": "",
+      "x": 180.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C57",
+      "kind": "thermostat_nc",
+      "tag": "33347",
+      "description": "",
+      "x": 300.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C58",
+      "kind": "vacuum_no",
+      "tag": "33255",
+      "description": "",
+      "x": 420.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C59",
+      "kind": "vacuum_nc",
+      "tag": "33256",
+      "description": "",
+      "x": 540.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C60",
+      "kind": "photoelectric_no",
+      "tag": "33025",
+      "description": "",
+      "x": 660.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C61",
+      "kind": "photo_receiver_no",
+      "tag": "33034",
+      "description": "",
+      "x": 780.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C62",
+      "kind": "photo_receiver_nc",
+      "tag": "33033",
+      "description": "",
+      "x": 900.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C63",
+      "kind": "photo_emitter_no",
+      "tag": "33027",
+      "description": "",
+      "x": 1020.0,
+      "y": 575.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C64",
+      "kind": "power_contactor_1",
+      "tag": "32899",
+      "description": "",
+      "x": 60.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C65",
+      "kind": "power_contactor_2",
+      "tag": "32834",
+      "description": "",
+      "x": 180.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C66",
+      "kind": "power_contactor_3",
+      "tag": "32833",
+      "description": "",
+      "x": 300.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C67",
+      "kind": "power_contactor_4",
+      "tag": "32835",
+      "description": "",
+      "x": 420.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C68",
+      "kind": "power_switch_1",
+      "tag": "32900",
+      "description": "",
+      "x": 540.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C69",
+      "kind": "power_switch_2",
+      "tag": "32836",
+      "description": "",
+      "x": 660.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C70",
+      "kind": "power_switch_3",
+      "tag": "32837",
+      "description": "",
+      "x": 780.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C71",
+      "kind": "power_switch_4",
+      "tag": "32838",
+      "description": "",
+      "x": 900.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C72",
+      "kind": "power_contactor_3_nc",
+      "tag": "33219",
+      "description": "",
+      "x": 1020.0,
+      "y": 660.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C73",
+      "kind": "selector_i_0_ii",
+      "tag": "33047",
+      "description": "",
+      "x": 60.0,
+      "y": 745.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C74",
+      "kind": "selector_i_ii_iii",
+      "tag": "33048",
+      "description": "",
+      "x": 180.0,
+      "y": 745.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C75",
+      "kind": "crossover",
+      "tag": "33049",
+      "description": "",
+      "x": 300.0,
+      "y": 745.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C76",
+      "kind": "push_actuator",
+      "tag": "33278",
+      "description": "",
+      "x": 420.0,
+      "y": 745.0,
+      "rotation": 0.0
+    },
+    {
+      "id": "C77",
+      "kind": "mechanical_interlock",
+      "tag": "33392",
+      "description": "",
+      "x": 540.0,
+      "y": 745.0,
+      "rotation": 0.0
+    }
+  ],
+  "wires": [],
+  "notes": [
+    {
+      "id": "Legenda1",
+      "text": "Contato NA",
+      "x": 45.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda2",
+      "text": "Contato NF",
+      "x": 165.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda3",
+      "text": "Botoeira NA (liga)",
+      "x": 285.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda4",
+      "text": "Botoeira NF (desliga)",
+      "x": 405.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda5",
+      "text": "Emergencia NF",
+      "x": 525.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda6",
+      "text": "Seletor NA",
+      "x": 645.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda7",
+      "text": "Bobina de contator/rele",
+      "x": 765.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda8",
+      "text": "Bobina de temporizador",
+      "x": 885.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda9",
+      "text": "Contato NF de rele termico",
+      "x": 1005.0,
+      "y": 83.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda10",
+      "text": "Fusivel",
+      "x": 45.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda11",
+      "text": "Disjuntor unipolar",
+      "x": 165.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda12",
+      "text": "Sinaleiro",
+      "x": 285.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda13",
+      "text": "Motor (representacao)",
+      "x": 405.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda14",
+      "text": "Resistor",
+      "x": 525.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda15",
+      "text": "Borne / ponto de alimentacao",
+      "x": 645.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda16",
+      "text": "Ponto de juncao",
+      "x": 765.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda17",
+      "text": "Terra de protecao",
+      "x": 885.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda18",
+      "text": "Contato auxiliar NA + NF",
+      "x": 1005.0,
+      "y": 168.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda19",
+      "text": "Contato auxiliar Comutador",
+      "x": 45.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda20",
+      "text": "Botoeira NA + NF",
+      "x": 165.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda21",
+      "text": "Botoeira Comutador",
+      "x": 285.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda22",
+      "text": "Botoeira cogumelo NA",
+      "x": 405.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda23",
+      "text": "Botoeira cogumelo NA + NF",
+      "x": 525.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda24",
+      "text": "Botoeira cogumelo Comutador",
+      "x": 645.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda25",
+      "text": "Interruptor NA",
+      "x": 765.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda26",
+      "text": "Interruptor NF",
+      "x": 885.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda27",
+      "text": "Interruptor NA + NF",
+      "x": 1005.0,
+      "y": 253.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda28",
+      "text": "Interruptor Comutador",
+      "x": 45.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda29",
+      "text": "Fim de curso NA",
+      "x": 165.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda30",
+      "text": "Fim de curso NF",
+      "x": 285.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda31",
+      "text": "Fim de curso NA + NF",
+      "x": 405.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda32",
+      "text": "Fim de curso Comutador",
+      "x": 525.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda33",
+      "text": "Contato de rele termico NA",
+      "x": 645.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda34",
+      "text": "Contato de rele termico NA + NF",
+      "x": 765.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda35",
+      "text": "Contato de rele termico\nComutador",
+      "x": 885.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda36",
+      "text": "Temporizado na energizacao NA",
+      "x": 1005.0,
+      "y": 338.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda37",
+      "text": "Temporizado na energizacao NF",
+      "x": 45.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda38",
+      "text": "Temporizado na energizacao NA +\nNF",
+      "x": 165.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda39",
+      "text": "Temporizado na energizacao\nComutador",
+      "x": 285.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda40",
+      "text": "Temporizado na desenergizacao NA",
+      "x": 405.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda41",
+      "text": "Temporizado na desenergizacao NF",
+      "x": 525.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda42",
+      "text": "Temporizado na desenergizacao NA\n+ NF",
+      "x": 645.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda43",
+      "text": "Temporizado na desenergizacao\nComutador",
+      "x": 765.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda44",
+      "text": "Temporizado na\nenergizacao/desenergizacao NA",
+      "x": 885.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda45",
+      "text": "Temporizado na\nenergizacao/desenergizacao NF",
+      "x": 1005.0,
+      "y": 423.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda46",
+      "text": "Temporizado na\nenergizacao/desenergizacao NA +\nNF",
+      "x": 45.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda47",
+      "text": "Temporizado na\nenergizacao/desenergizacao\nComutador",
+      "x": 165.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda48",
+      "text": "Sensor indutivo NA",
+      "x": 285.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda49",
+      "text": "Sensor indutivo NF",
+      "x": 405.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda50",
+      "text": "Sensor capacitivo NA",
+      "x": 525.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda51",
+      "text": "Sensor capacitivo NF",
+      "x": 645.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda52",
+      "text": "Sensor magnetico NA",
+      "x": 765.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda53",
+      "text": "Sensor magnetico NF",
+      "x": 885.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda54",
+      "text": "Pressostato NA",
+      "x": 1005.0,
+      "y": 508.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda55",
+      "text": "Pressostato NF",
+      "x": 45.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda56",
+      "text": "Termostato NA",
+      "x": 165.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda57",
+      "text": "Termostato NF",
+      "x": 285.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda58",
+      "text": "Vacuostato NA",
+      "x": 405.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda59",
+      "text": "Vacuostato NF",
+      "x": 525.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda60",
+      "text": "Barreira fotoeletrica NA",
+      "x": 645.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda61",
+      "text": "Receptor fotoeletrico NA",
+      "x": 765.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda62",
+      "text": "Receptor fotoeletrico NF",
+      "x": 885.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda63",
+      "text": "Emissor fotoeletrico",
+      "x": 1005.0,
+      "y": 593.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda64",
+      "text": "Contator de potencia 1 polo(s)",
+      "x": 45.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda65",
+      "text": "Contator de potencia 2 polo(s)",
+      "x": 165.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda66",
+      "text": "Contator de potencia 3 polo(s)",
+      "x": 285.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda67",
+      "text": "Contator de potencia 4 polo(s)",
+      "x": 405.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda68",
+      "text": "Interruptor de potencia 1\npolo(s)",
+      "x": 525.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda69",
+      "text": "Interruptor de potencia 2\npolo(s)",
+      "x": 645.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda70",
+      "text": "Interruptor de potencia 3\npolo(s)",
+      "x": 765.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda71",
+      "text": "Interruptor de potencia 4\npolo(s)",
+      "x": 885.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda72",
+      "text": "Contator tripolar NF",
+      "x": 1005.0,
+      "y": 678.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda73",
+      "text": "Seletor I-0-II",
+      "x": 45.0,
+      "y": 763.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda74",
+      "text": "Seletor I-II-III",
+      "x": 165.0,
+      "y": 763.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda75",
+      "text": "Comutador de cruzamento",
+      "x": 285.0,
+      "y": 763.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda76",
+      "text": "Acionador de botoeira (2D)",
+      "x": 405.0,
+      "y": 763.0,
+      "size": 2.0
+    },
+    {
+      "id": "Legenda77",
+      "text": "Intertravamento mecanico",
+      "x": 525.0,
+      "y": 763.0,
+      "size": 2.0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "objects": [
+    "App::FeaturePython",
+    "TechDraw::DrawPage",
+    "TechDraw::DrawSVGTemplate"
+  ],
+  "solid_objects": 0,
+  "symbols": 77,
+  "svg_embedded": true,
+  "local_documentation_links": "valid"
+}

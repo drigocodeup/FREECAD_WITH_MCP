@@ -7,6 +7,7 @@ from mcp.client.stdio import stdio_client
 from mcp.client.streamable_http import streamable_http_client
 from test_http import running_http
 from cess_gui.electrical_model import wire_points
+from cess_gui.electrical_examples import contacts_catalog_example
 
 PROJECT=Path(__file__).resolve().parents[1]
 pytestmark=[pytest.mark.integration,pytest.mark.skipif(os.environ.get('FREECAD_INTEGRATION')!='1',reason='Requires real FreeCAD GUI')]
@@ -23,7 +24,7 @@ def test_electrical_real_roundtrip(transport):
             calls.append(op)
             return result.structuredContent or json.loads(result.content[0].text)
         catalog=await call('electrical_catalog')
-        assert len(catalog['symbols'])==17 and catalog['simulation'] is False
+        assert len(catalog['symbols'])==77 and catalog['simulation'] is False
         name='Eletrica_'+transport+'_'+str(time.time_ns())
         await call('new_document',name=name)
         sheet=await call('electrical_create_sheet',document=name,name='Comando',paper='A4',orientation='portrait')
@@ -53,6 +54,19 @@ def test_electrical_real_roundtrip(transport):
         actual=await call('electrical_get_sheet',document=reopened['document'],sheet=args['sheet'])
         assert actual['drawing']==updated['drawing'] and actual['wire_count']==1
         await call('close_document',document=reopened['document'],discard=True)
+        if transport=='stdio':
+            gallery_name=name+'_Catalogo'
+            await call('new_document',name=gallery_name)
+            gallery=await call('electrical_create_sheet',document=gallery_name,name='Catalogo',paper='A0')
+            gallery_args=dict(document=gallery_name,sheet=gallery['sheet'])
+            gallery=await call('electrical_update_sheet',**gallery_args,drawing=contacts_catalog_example())
+            assert gallery['symbol_count']==77
+            for extension in ('.pdf','.svg','.png','.json'):
+                saved=await call('electrical_export_sheet',**gallery_args,filename=gallery_name+extension)
+                outputs.append(saved['path'])
+            saved=await call('save_fcstd',document=gallery_name,filename=gallery_name+'.FCStd')
+            outputs.append(saved['path'])
+            await call('close_document',document=gallery_name,discard=True)
         (PROJECT/('electrical-'+transport+'-validation.json')).write_text(json.dumps(dict(passed=True,transport=transport,calls=calls,outputs=outputs),indent=2),encoding='utf-8')
     async def run_stdio():
         async with stdio_client(StdioServerParameters(command=sys.executable,args=[str(PROJECT/'server.py')])) as (r,w):

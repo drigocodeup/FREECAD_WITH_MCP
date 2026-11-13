@@ -1,0 +1,16 @@
+﻿{
+    "excluded":  [
+                     "test_gear_pair_mcp.py",
+                     "test_generators_mcp.py",
+                     "test_fastener_mcp.py"
+                 ],
+    "failures":  "0",
+    "electrical_tests":  32,
+    "passed":  122,
+    "skipped":  1,
+    "simulation":  false,
+    "tests":  "123",
+    "symbols":  77,
+    "reference_toolbar_items":  66,
+    "dimensions":  "2D"
+}

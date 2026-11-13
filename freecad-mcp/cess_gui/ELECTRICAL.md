@@ -18,7 +18,7 @@ O carimbo permite editar empresa/escola, título, código do projeto, responsáv
 
 ## Biblioteca inicial
 
-17 símbolos vetoriais próprios: contato NA/NF, botoeira NA/NF, emergência, seletor, bobina, bobina temporizada, contato térmico NF, fusível, disjuntor, sinaleiro, motor, resistor, borne, junção e terra. Identificações podem se repetir entre bobina e contatos do mesmo dispositivo; IDs internos são únicos.
+A biblioteca inclui 77 símbolos vetoriais próprios, com 66 itens das barras de contatos do CADe_SIMU. Consulte o [inventário completo](../docs/CONTACTS-2D.md). Os tipos iniciais incluem: contato NA/NF, botoeira NA/NF, emergência, seletor, bobina, bobina temporizada, contato térmico NF, fusível, disjuntor, sinaleiro, motor, resistor, borne, junção e terra. Identificações podem se repetir entre bobina e contatos do mesmo dispositivo; IDs internos são únicos.
 
 A pasta CADe_SIMU fornecida foi consultada como referência de organização funcional e identificação dos terminais. Não havia uma biblioteca SVG separada. Os desenhos foram implementados neste projeto: não foi incorporado o executável nem extraída sua biblioteca binária. Não há importação de arquivos `.cad` do CADe_SIMU nesta versão.
 

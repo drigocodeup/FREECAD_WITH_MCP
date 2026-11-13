@@ -12,13 +12,15 @@ A inicialização carrega três barras: **CESS — Desenho**, com **Centralizar*
 
 ## Diagramas elétricos
 
-Clique em **Nova prancha elétrica**, escolha A0 a A4, orientação, grade e dados do quadro inferior. Use a biblioteca para inserir os 17 símbolos disponíveis e **Fio (2 pontos)** para conectar terminais. Movimentação, rotação, textos e desfazer são integrados ao documento. Salve FCStd e exporte PDF/SVG/PNG/JSON em `modelos`.
+Clique em **Nova prancha elétrica**, escolha A0 a A4, orientação, grade e dados do quadro inferior. Use a biblioteca para inserir os 77 símbolos disponíveis e **Fio (2 pontos)** para conectar terminais. Movimentação, rotação, textos e desfazer são integrados ao documento. Salve FCStd e exporte PDF/SVG/PNG/JSON em `modelos`.
 
 O botão **Exemplo de comando** cria uma prancha de partida/parada com selo. [Exemplo FCStd](../modelos/eletrica/comando_contator.FCStd) · [PDF](../modelos/eletrica/comando_contator.pdf) · [Captura do editor](../modelos/eletrica/editor_exemplo.png).
 
 São desenhos vetoriais próprios inspirados na organização do CADe_SIMU, sem importação `.cad` ou simulação elétrica. Os dois transportes compartilham as sete ferramentas `freecad_electrical_*`.
 
-Na validação elétrica, os **29 testes passaram**, além dos testes gráficos e de todos os formatos. A execução selecionada teve **120 aprovados e 1 ignorado**. A regressão completa teve encerramento nativo do FreeCAD em `UIAutomationCore.dll` e **não foi aprovada**. Consulte [resultados, ocorrências e limites](docs/VALIDATION-ELECTRICAL.md).
+Após a ampliação para 77 símbolos, os **32 testes elétricos passaram**, além do teste gráfico real com os novos contatos. A execução selecionada teve **122 aprovados e 1 ignorado**, excluindo os três testes MCP pesados dos geradores mecânicos. [Inventário dos 66 itens de referência e limites](docs/CONTACTS-2D.md) · [Catálogo FCStd](../modelos/eletrica/catalogo_contatos_2d.FCStd) · [Catálogo PDF](../modelos/eletrica/catalogo_contatos_2d.pdf).
+
+A regressão completa anterior teve encerramento nativo do FreeCAD em `UIAutomationCore.dll` e **não foi aprovada**. Consulte [resultados, ocorrências e limites](docs/VALIDATION-ELECTRICAL.md).
 
 ## Ambiente instalado
 

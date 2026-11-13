@@ -1,0 +1,1563 @@
+{
+  "source_name": "CADe_SIMU.exe",
+  "source_sha256": "5f7b56f8b01ea2cd472e9112c251496914a358b57e6de08d3a8111c80ba50fb9",
+  "dimension": "2D",
+  "scoped_toolbars": [
+    {
+      "resource_id": 175,
+      "commands": [
+        32899,
+        32834,
+        32833,
+        32835,
+        33219,
+        32900,
+        32836,
+        32837,
+        32838,
+        33392
+      ]
+    },
+    {
+      "resource_id": 189,
+      "commands": [
+        33278,
+        32909,
+        32910,
+        32912,
+        32913,
+        32914,
+        32915,
+        32917,
+        32918,
+        32919,
+        32920,
+        32921,
+        32922,
+        33047,
+        33048,
+        33049,
+        32923,
+        32924,
+        32925,
+        32926,
+        32927,
+        32928,
+        32929,
+        32930
+      ]
+    },
+    {
+      "resource_id": 191,
+      "commands": [
+        32937,
+        32938,
+        32939,
+        32940,
+        32933,
+        32934,
+        32935,
+        32936,
+        32941,
+        32942,
+        32943,
+        32944,
+        32945,
+        32946,
+        32947,
+        32948
+      ]
+    },
+    {
+      "resource_id": 215,
+      "commands": [
+        33032,
+        33020,
+        33021,
+        33022,
+        33023,
+        33024,
+        33025,
+        33027,
+        33034,
+        33033,
+        33253,
+        33254,
+        33255,
+        33256,
+        33346,
+        33347
+      ]
+    }
+  ],
+  "reference_count": 66,
+  "catalog_count": 77,
+  "entries": [
+    {
+      "command_id": 32833,
+      "source_label": "Contactor III",
+      "kind": "power_contactor_3",
+      "label": "Contator de potencia 3 polo(s)",
+      "pins": [
+        [
+          "1",
+          -3.0,
+          -10
+        ],
+        [
+          "2",
+          -3.0,
+          10
+        ],
+        [
+          "3",
+          0.0,
+          -10
+        ],
+        [
+          "4",
+          0.0,
+          10
+        ],
+        [
+          "5",
+          3.0,
+          -10
+        ],
+        [
+          "6",
+          3.0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32834,
+      "source_label": "Contactor II",
+      "kind": "power_contactor_2",
+      "label": "Contator de potencia 2 polo(s)",
+      "pins": [
+        [
+          "1",
+          -1.5,
+          -10
+        ],
+        [
+          "2",
+          -1.5,
+          10
+        ],
+        [
+          "3",
+          1.5,
+          -10
+        ],
+        [
+          "4",
+          1.5,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32835,
+      "source_label": "Contactor IIII",
+      "kind": "power_contactor_4",
+      "label": "Contator de potencia 4 polo(s)",
+      "pins": [
+        [
+          "1",
+          -4.5,
+          -10
+        ],
+        [
+          "2",
+          -4.5,
+          10
+        ],
+        [
+          "3",
+          -1.5,
+          -10
+        ],
+        [
+          "4",
+          -1.5,
+          10
+        ],
+        [
+          "5",
+          1.5,
+          -10
+        ],
+        [
+          "6",
+          1.5,
+          10
+        ],
+        [
+          "7",
+          4.5,
+          -10
+        ],
+        [
+          "8",
+          4.5,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32836,
+      "source_label": "Switch II",
+      "kind": "power_switch_2",
+      "label": "Interruptor de potencia 2 polo(s)",
+      "pins": [
+        [
+          "1",
+          -1.5,
+          -10
+        ],
+        [
+          "2",
+          -1.5,
+          10
+        ],
+        [
+          "3",
+          1.5,
+          -10
+        ],
+        [
+          "4",
+          1.5,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32837,
+      "source_label": "Switch III",
+      "kind": "power_switch_3",
+      "label": "Interruptor de potencia 3 polo(s)",
+      "pins": [
+        [
+          "1",
+          -3.0,
+          -10
+        ],
+        [
+          "2",
+          -3.0,
+          10
+        ],
+        [
+          "3",
+          0.0,
+          -10
+        ],
+        [
+          "4",
+          0.0,
+          10
+        ],
+        [
+          "5",
+          3.0,
+          -10
+        ],
+        [
+          "6",
+          3.0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32838,
+      "source_label": "Switch IIII",
+      "kind": "power_switch_4",
+      "label": "Interruptor de potencia 4 polo(s)",
+      "pins": [
+        [
+          "1",
+          -4.5,
+          -10
+        ],
+        [
+          "2",
+          -4.5,
+          10
+        ],
+        [
+          "3",
+          -1.5,
+          -10
+        ],
+        [
+          "4",
+          -1.5,
+          10
+        ],
+        [
+          "5",
+          1.5,
+          -10
+        ],
+        [
+          "6",
+          1.5,
+          10
+        ],
+        [
+          "7",
+          4.5,
+          -10
+        ],
+        [
+          "8",
+          4.5,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32899,
+      "source_label": "Contactor I",
+      "kind": "power_contactor_1",
+      "label": "Contator de potencia 1 polo(s)",
+      "pins": [
+        [
+          "1",
+          0.0,
+          -10
+        ],
+        [
+          "2",
+          0.0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32900,
+      "source_label": "Switch I",
+      "kind": "power_switch_1",
+      "label": "Interruptor de potencia 1 polo(s)",
+      "pins": [
+        [
+          "1",
+          0.0,
+          -10
+        ],
+        [
+          "2",
+          0.0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32909,
+      "source_label": "Push button",
+      "kind": "push_no",
+      "label": "Botoeira NA (liga)",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32910,
+      "source_label": "NC button",
+      "kind": "push_nc",
+      "label": "Botoeira NF (desliga)",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32912,
+      "source_label": "NO-NC button",
+      "kind": "push_no_nc",
+      "label": "Botoeira NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32913,
+      "source_label": "CON button",
+      "kind": "push_changeover",
+      "label": "Botoeira Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32914,
+      "source_label": "NO button mushroom",
+      "kind": "mushroom_no",
+      "label": "Botoeira cogumelo NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32915,
+      "source_label": "NC button mushroom",
+      "kind": "emergency",
+      "label": "Emergencia NF",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32917,
+      "source_label": "NO-NC button mushroom",
+      "kind": "mushroom_no_nc",
+      "label": "Botoeira cogumelo NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32918,
+      "source_label": "CON button mushroom",
+      "kind": "mushroom_changeover",
+      "label": "Botoeira cogumelo Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32919,
+      "source_label": "NO switch",
+      "kind": "switch_no",
+      "label": "Interruptor NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32920,
+      "source_label": "NC switch",
+      "kind": "switch_nc",
+      "label": "Interruptor NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32921,
+      "source_label": "NO-NC switch",
+      "kind": "switch_no_nc",
+      "label": "Interruptor NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32922,
+      "source_label": "COM switch",
+      "kind": "switch_changeover",
+      "label": "Interruptor Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32923,
+      "source_label": "NO limit",
+      "kind": "limit_no",
+      "label": "Fim de curso NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32924,
+      "source_label": "NC limit",
+      "kind": "limit_nc",
+      "label": "Fim de curso NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32925,
+      "source_label": "NO-NC limit",
+      "kind": "limit_no_nc",
+      "label": "Fim de curso NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32926,
+      "source_label": "COM limit",
+      "kind": "limit_changeover",
+      "label": "Fim de curso Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32927,
+      "source_label": "NO Auxiliary heat relay",
+      "kind": "thermal_no",
+      "label": "Contato de rele termico NA",
+      "pins": [
+        [
+          "97",
+          0,
+          -10
+        ],
+        [
+          "98",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32928,
+      "source_label": "NC Auxiliary heat relay",
+      "kind": "thermal_nc",
+      "label": "Contato NF de rele termico",
+      "pins": [
+        [
+          "95",
+          0,
+          -10
+        ],
+        [
+          "96",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32929,
+      "source_label": "NO-NC Auxiliary heat relay",
+      "kind": "thermal_no_nc",
+      "label": "Contato de rele termico NA + NF",
+      "pins": [
+        [
+          "97",
+          -4,
+          -10
+        ],
+        [
+          "98",
+          -4,
+          10
+        ],
+        [
+          "95",
+          3,
+          -10
+        ],
+        [
+          "96",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32930,
+      "source_label": "COM Auxiliary heat relay",
+      "kind": "thermal_changeover",
+      "label": "Contato de rele termico Comutador",
+      "pins": [
+        [
+          "95",
+          0,
+          -10
+        ],
+        [
+          "96",
+          -4,
+          10
+        ],
+        [
+          "98",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32933,
+      "source_label": "NO contact with the connection timed",
+      "kind": "timer_on_no",
+      "label": "Temporizado na energizacao NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32934,
+      "source_label": "NC contact with the connection timed",
+      "kind": "timer_on_nc",
+      "label": "Temporizado na energizacao NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32935,
+      "source_label": "NO+NC contact with the connection timed",
+      "kind": "timer_on_no_nc",
+      "label": "Temporizado na energizacao NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32936,
+      "source_label": "CON contact with the connection timed",
+      "kind": "timer_on_changeover",
+      "label": "Temporizado na energizacao Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32937,
+      "source_label": "NO contact",
+      "kind": "contact_no",
+      "label": "Contato NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32938,
+      "source_label": "NC contact",
+      "kind": "contact_nc",
+      "label": "Contato NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32939,
+      "source_label": "NO+NC contact",
+      "kind": "contact_no_nc",
+      "label": "Contato auxiliar NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32940,
+      "source_label": "CON contact",
+      "kind": "contact_changeover",
+      "label": "Contato auxiliar Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32941,
+      "source_label": "NO Contact timed to disconnection",
+      "kind": "timer_off_no",
+      "label": "Temporizado na desenergizacao NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32942,
+      "source_label": "NC Contact timed to disconnection",
+      "kind": "timer_off_nc",
+      "label": "Temporizado na desenergizacao NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32943,
+      "source_label": "NO+NC Contact timed to disconnection",
+      "kind": "timer_off_no_nc",
+      "label": "Temporizado na desenergizacao NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32944,
+      "source_label": "CON Contact timed to disconnection",
+      "kind": "timer_off_changeover",
+      "label": "Temporizado na desenergizacao Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32945,
+      "source_label": "NO contact with the connection disconnection timed",
+      "kind": "timer_on_off_no",
+      "label": "Temporizado na energizacao/desenergizacao NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32946,
+      "source_label": "NC contact with the connection disconnection timed",
+      "kind": "timer_on_off_nc",
+      "label": "Temporizado na energizacao/desenergizacao NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32947,
+      "source_label": "NO+NC contact with the connection disconnection timed",
+      "kind": "timer_on_off_no_nc",
+      "label": "Temporizado na energizacao/desenergizacao NA + NF",
+      "pins": [
+        [
+          "13",
+          -4,
+          -10
+        ],
+        [
+          "14",
+          -4,
+          10
+        ],
+        [
+          "21",
+          3,
+          -10
+        ],
+        [
+          "22",
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 32948,
+      "source_label": "CON contact with the connection disconnection timed",
+      "kind": "timer_on_off_changeover",
+      "label": "Temporizado na energizacao/desenergizacao Comutador",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33020,
+      "source_label": "NCInductive detector",
+      "kind": "inductive_nc",
+      "label": "Sensor indutivo NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33021,
+      "source_label": "NO Capacitive detector",
+      "kind": "capacitive_no",
+      "label": "Sensor capacitivo NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33022,
+      "source_label": "NC Capacitive detector",
+      "kind": "capacitive_nc",
+      "label": "Sensor capacitivo NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33023,
+      "source_label": "NO Magnetic detector",
+      "kind": "magnetic_no",
+      "label": "Sensor magnetico NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33024,
+      "source_label": "NC Magnetic detector",
+      "kind": "magnetic_nc",
+      "label": "Sensor magnetico NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33025,
+      "source_label": "Light barrier",
+      "kind": "photoelectric_no",
+      "label": "Barreira fotoeletrica NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33027,
+      "source_label": "Emitter barrier",
+      "kind": "photo_emitter_no",
+      "label": "Emissor fotoeletrico",
+      "pins": [
+        [
+          "A1",
+          0,
+          -10
+        ],
+        [
+          "A2",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33032,
+      "source_label": "NO Inductive detector",
+      "kind": "inductive_no",
+      "label": "Sensor indutivo NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33033,
+      "source_label": "NC receptor barrier",
+      "kind": "photo_receiver_nc",
+      "label": "Receptor fotoeletrico NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33034,
+      "source_label": "NO receptor barrier",
+      "kind": "photo_receiver_no",
+      "label": "Receptor fotoeletrico NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33047,
+      "source_label": " I-0-II switch",
+      "kind": "selector_i_0_ii",
+      "label": "Seletor I-0-II",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33048,
+      "source_label": "I-II-III switch",
+      "kind": "selector_i_ii_iii",
+      "label": "Seletor I-II-III",
+      "pins": [
+        [
+          "11",
+          0,
+          -10
+        ],
+        [
+          "12",
+          -4,
+          10
+        ],
+        [
+          "14",
+          0,
+          10
+        ],
+        [
+          "16",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33049,
+      "source_label": "Crossover switch",
+      "kind": "crossover",
+      "label": "Comutador de cruzamento",
+      "pins": [
+        [
+          "1",
+          -4,
+          -10
+        ],
+        [
+          "2",
+          4,
+          -10
+        ],
+        [
+          "3",
+          -4,
+          10
+        ],
+        [
+          "4",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33219,
+      "source_label": "Contactor III",
+      "kind": "power_contactor_3_nc",
+      "label": "Contator tripolar NF",
+      "pins": [
+        [
+          "1",
+          -3.0,
+          -10
+        ],
+        [
+          "2",
+          -3.0,
+          10
+        ],
+        [
+          "3",
+          0.0,
+          -10
+        ],
+        [
+          "4",
+          0.0,
+          10
+        ],
+        [
+          "5",
+          3.0,
+          -10
+        ],
+        [
+          "6",
+          3.0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33253,
+      "source_label": "Pressure switch NO\\Pressure switch NO",
+      "kind": "pressure_no",
+      "label": "Pressostato NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33254,
+      "source_label": "Pressure switch NC\\Pressure switch NC",
+      "kind": "pressure_nc",
+      "label": "Pressostato NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33255,
+      "source_label": "Empty pressure NO",
+      "kind": "vacuum_no",
+      "label": "Vacuostato NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33256,
+      "source_label": "Empty pressure NC",
+      "kind": "vacuum_nc",
+      "label": "Vacuostato NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33278,
+      "source_label": "Push button",
+      "kind": "push_actuator",
+      "label": "Acionador de botoeira (2D)",
+      "pins": []
+    },
+    {
+      "command_id": 33346,
+      "source_label": "Thermostat NO\\Thermostat NO",
+      "kind": "thermostat_no",
+      "label": "Termostato NA",
+      "pins": [
+        [
+          "13",
+          0,
+          -10
+        ],
+        [
+          "14",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33347,
+      "source_label": "Thermostat NC\\Thermostat NC",
+      "kind": "thermostat_nc",
+      "label": "Termostato NF",
+      "pins": [
+        [
+          "21",
+          0,
+          -10
+        ],
+        [
+          "22",
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "command_id": 33392,
+      "source_label": "Interlocking",
+      "kind": "mechanical_interlock",
+      "label": "Intertravamento mecanico",
+      "pins": []
+    }
+  ]
+}

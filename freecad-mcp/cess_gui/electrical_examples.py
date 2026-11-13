@@ -24,3 +24,16 @@ def start_stop_example():
     model['notes']=[dict(id='N1',text='COMANDO DE CONTATOR\nPartida, parada e contato de selo',x=195,y=45,size=3),
                     dict(id='N2',text='S0 - Botoeira normalmente fechada\nS1 - Botoeira normalmente aberta\nKM1 - Bobina e contato auxiliar\nH1 - Sinaleiro',x=195,y=75,size=2.5)]
     return validate(model)
+def contacts_catalog_example():
+    """A0 vector catalog: every symbol and every connectable pin, without solids."""
+    import textwrap
+    from cess_gui.electrical_symbols import CATALOG
+    from cess_gui.electrical_model import new_drawing,add_symbol,validate
+    model=new_drawing('A0','landscape',{'company':'CESS','title':'Biblioteca de contatos 2D',
+                                      'project':'CAT-CONTATOS','revision':'1'})
+    for i,(kind,symbol) in enumerate(CATALOG.items()):
+        x=60+(i%9)*120;y=65+(i//9)*85
+        tag=str(symbol.get('reference_command','')) or symbol['prefix']+str(i+1)
+        model,_=add_symbol(model,kind,x,y,tag=tag)
+        model['notes'].append(dict(id='Legenda'+str(i+1),text=textwrap.fill(symbol['label'],32),x=x-15,y=y+18,size=2))
+    return validate(model)

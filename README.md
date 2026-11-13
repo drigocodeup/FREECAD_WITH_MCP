@@ -1,6 +1,6 @@
 # FreeCAD with MCP
 
-Novo módulo **CESS — Elétrica**: diagramas com 17 símbolos de comando, fios, textos e prancha A0 a A4 com carimbo editável. [Como usar](freecad-mcp/cess_gui/ELECTRICAL.md) · [Exemplo FCStd](modelos/eletrica/comando_contator.FCStd) · [Prancha PDF](modelos/eletrica/comando_contator.pdf). Somente desenho, sem simulação.
+Novo módulo **CESS — Elétrica**: diagramas com 77 símbolos de comando, fios, textos e prancha A0 a A4 com carimbo editável. [Como usar](freecad-mcp/cess_gui/ELECTRICAL.md) · [Exemplo FCStd](modelos/eletrica/comando_contator.FCStd) · [Prancha PDF](modelos/eletrica/comando_contator.pdf). Somente desenho, sem simulação.
 
 Novos geradores: [conjunto de engrenagens com dois eixos, caixa e tampa](freecad-mcp/cess_gui/GEAR_SETS.md), configurado por relação entrada:saída, e [parafuso/porca com cabeça Allen ou sextavada e rosca 3D real](freecad-mcp/cess_gui/FASTENERS.md). Ambos têm janela de parâmetros e ferramentas MCP nos dois transportes.
 
@@ -19,13 +19,15 @@ Na barra **CESS — Elétrica**, use **Nova prancha elétrica**, **Editar diagra
 - Escolha papel **A0, A1, A2, A3 ou A4**, em retrato ou paisagem.
 - Margem esquerda de 20 mm, demais de 10 mm e quadro inferior de 180 × 35 mm, com espaço reservado para o carimbo.
 - Edite empresa/escola, título, código do projeto, responsável, verificação, revisão, data e numeração das folhas.
-- Insira contatos NA/NF, botoeiras, bobinas, proteções, sinaleiro, motor, bornes e outros símbolos; são **17 símbolos vetoriais**.
+- Insira contatos NA/NF, botoeiras, bobinas, proteções, sinaleiro, motor, bornes e outros símbolos; são **77 símbolos vetoriais**.
 - Desenhe fios ortogonais entre terminais, mova componentes, gire, insira textos e desfaça alterações. Os fios acompanham os componentes.
 - Salve em **FCStd** com página TechDraw e exporte **PDF, SVG, PNG ou JSON** para `modelos`.
 
 ![Editor elétrico com comando de partida, parada e selo](modelos/eletrica/editor_exemplo.png)
 
 [Abrir exemplo FCStd](modelos/eletrica/comando_contator.FCStd) · [Prancha PDF](modelos/eletrica/comando_contator.pdf) · [Imagem da prancha](modelos/eletrica/comando_contator.png) · [Manual do módulo](freecad-mcp/cess_gui/ELECTRICAL.md)
+
+A ampliação cobre os **66 itens das barras de contatos, acionamentos, potência e sensores** do CADe_SIMU, identificados por navegação na aplicação e conferência dos recursos internos. [Inventário e limites](freecad-mcp/docs/CONTACTS-2D.md) · [Catálogo completo FCStd](modelos/eletrica/catalogo_contatos_2d.FCStd) · [Catálogo PDF](modelos/eletrica/catalogo_contatos_2d.pdf).
 
 A organização funcional foi inspirada nas referências locais do CADe_SIMU. Os símbolos são próprios; esta versão não importa arquivos `.cad`, não simula circuitos e não realiza verificação normativa.
 
@@ -93,7 +95,9 @@ O bridge aceita somente operações permitidas, sem execução arbitrária de Py
 
 ## Validação
 
-Validação mais recente do módulo elétrico, em **12/11/2026**:
+Validação mais recente, após ampliar os contatos 2D em **12/11/2026**: **122 testes aprovados e 1 ignorado**, incluindo **32 testes elétricos** e chamadas reais STDIO/HTTP. Foram excluídos os três testes MCP pesados de geradores mecânicos. O catálogo A0 de 77 símbolos foi salvo, exportado e reaberto no FreeCAD; o teste gráfico inseriu e conectou novos contatos. [Resumo](freecad-mcp/contacts-test-summary.json) · [Conferência da biblioteca](freecad-mcp/docs/CONTACTS-2D.md).
+
+Validação inicial do módulo elétrico, preservada como histórico:
 
 - **29 testes elétricos aprovados**, incluindo criação, edição, exportação e reabertura de documentos reais pelos dois transportes MCP.
 - Teste gráfico com inserção de símbolos e fio por mouse, edição de posição, atualização das conexões, desfazer e edição do carimbo.
