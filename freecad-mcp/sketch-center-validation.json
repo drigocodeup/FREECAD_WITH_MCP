@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "rectangles_mm": [
+    50,
+    40
+  ],
+  "equal_margins_mm": 5,
+  "dimensions_preserved": true,
+  "reference_fixed": true,
+  "undo_redo": true,
+  "positional_lock_rollback": true,
+  "in_edit_command": true,
+  "partial_axes": true,
+  "constraints_preserved": true,
+  "translation": {
+    "translation_mm": [
+      5.0,
+      -5.0
+    ],
+    "axes": "XY",
+    "center": [
+      45.0,
+      45.0
+    ]
+  },
+  "fcstd": "C:\\Users\\CESS UFF\\Projetos_CESS\\FreCAD_mcp\\modelos\\centralizar_sketch\\retangulos_50_40_1794570598279801500.FCStd"
+}

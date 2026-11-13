@@ -2,7 +2,7 @@
 
 Extensão Python para o FreeCAD instalado. Não exige compilar nem modificar o código-fonte C++ do FreeCAD. A pasta de fontes `FreeCAD/` não contém um executável nesta máquina; a aplicação utilizada é `C:/Program Files/FreeCAD 1.1/bin/freecad.exe`.
 
-Além da barra de desenho, a inicialização carrega a barra de cinco [geradores paramétricos](GENERATORS.md): engrenagem, caixa com tampa, letras caixa, números caixa e organizador.
+Além da barra de desenho, a inicialização carrega os sete [geradores paramétricos](GENERATORS.md) e o módulo de [elétrica](ELECTRICAL.md).
 
 ## Abrir com os botões
 
@@ -16,7 +16,19 @@ O script carrega o bridge MCP e a barra **CESS — Desenho**. Se FreeCAD estiver
 
 ## Centralizar
 
-1. Saia da edição do Sketcher.
+### Dois retângulos dentro do mesmo Sketcher
+
+1. Mantenha o esboço aberto em edição e clique **Centralizar**. Também funciona selecionando um esboço completo fora da edição.
+2. O diálogo identifica os contornos retangulares; selecione quem move e a referência. Por padrão, move o menor para o maior. Não é necessário selecionar todos os vértices e linhas.
+3. Escolha **XY**, **somente X** ou **somente Y**, nos eixos locais do esboço, e confirme.
+
+O solver do Sketcher move o contorno preservando suas cotas e restrições. Dois quadrados de 40 e 50 mm ficam com margens de 5 mm, mantendo a referência fixa. Contornos que compartilham um canto também são identificados. Ctrl+Z desfaz e Ctrl+Y refaz.
+
+São aceitos contornos fechados com quatro segmentos de linha paralelos aos eixos locais. Linhas de construção e pontos centrais não são tratados como retângulos. Se cotas de posição, fixações ou vínculos impedirem o deslocamento, a ferramenta recusa e reverte a operação; não remove restrições automaticamente. A centralização é pontual, sem criar vínculo paramétrico entre os centros.
+
+### Dois objetos independentes
+
+1. Saia da edição do Sketcher para mover objetos completos.
 2. Na árvore, selecione primeiro o objeto que deseja mover.
 3. Segurando Ctrl, selecione o objeto de referência.
 4. Clique **Centralizar**; confira os nomes e escolha XY, X, Y, XZ, YZ, XYZ ou Z.
@@ -26,7 +38,7 @@ Exemplo: um quadrado de 40 × 40 mm centralizado em outro de 100 × 100 mm resul
 
 O cálculo usa os centros das caixas delimitadoras no sistema global, sem alterar dimensões ou rotação. Para margens iguais, os retângulos precisam estar paralelos e um deve caber no outro. O movimento é pontual, não uma restrição paramétrica que se atualiza após redimensionar. Eixos não escolhidos permanecem inalterados.
 
-Suporta objetos independentes, incluindo retângulos Draft e esboços completos. Não reposiciona geometrias individuais dentro do mesmo esboço: nesse caso, use restrições Sketcher. Recusa dependências entre os dois objetos, objetos anexados a suporte e posições controladas por expressões, para preservar esses vínculos.
+Suporta objetos independentes, incluindo retângulos Draft e esboços completos. Recusa dependências entre os dois objetos, objetos anexados a suporte e posições controladas por expressões, para preservar esses vínculos. Dentro do mesmo esboço, use o modo Sketcher descrito acima.
 
 ## Cotas e textos
 
@@ -38,6 +50,7 @@ São anotações visíveis no modelo e salvas em FCStd. Não são gravações/re
 ## Validação realizada
 
 - Testes de cálculo e rejeição de coordenadas/eixos inválidos em `tests/test_alignment.py`.
+- Identificação de retângulos, canto compartilhado e contornos incompletos em `tests/test_sketch_center.py`. Teste gráfico/solver real em `tests/freecad_sketch_center.py`: 40/50 mm, referência fixa, cotas preservadas, XY/X/Y, desfazer/refazer, bloqueio por cota de posição e clique no próprio botão da barra durante edição. Evidência: `sketch-center-validation.json`.
 - Smoke test dentro de uma instância gráfica real em `tests/freecad_gui_smoke.py`: centralização, desfazer/refazer, transformação de contêiner pai, cota de 100 mm, texto, ausência de barra duplicada e ativação dos comandos interativos Dimension/Text pelos comandos CESS.
 - Barra e seus três botões confirmados na interface por Computer Use.
 - Evidência resumida e sem caminhos pessoais em `../gui-validation.json`.

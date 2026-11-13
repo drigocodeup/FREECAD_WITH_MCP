@@ -137,6 +137,6 @@ Os testes de integração criam arquivos locais novos. Não exigem nem enviam da
 
 ## Escopo e evolução
 
-O projeto implementa sólidos Part, sete geradores paramétricos, centralização entre objetos independentes, cotas/textos Draft e diagramas elétricos em páginas TechDraw. Exporta modelos mecânicos em FCStd/STEP/STL/PNG e pranchas elétricas em PDF/SVG/PNG/JSON. Desenhos mecânicos TechDraw cotados, centralização dentro do mesmo esboço, simulação elétrica e CAM/G-code ainda não estão implementados.
+O projeto implementa sólidos Part, sete geradores paramétricos, centralização entre objetos independentes e de retângulos no mesmo Sketcher, cotas/textos Draft e diagramas elétricos em páginas TechDraw. Exporta modelos mecânicos em FCStd/STEP/STL/PNG e pranchas elétricas em PDF/SVG/PNG/JSON. Desenhos mecânicos TechDraw cotados, simulação elétrica e CAM/G-code ainda não estão implementados.
 
 Consulte [instruções detalhadas](freecad-mcp/README.md), [diagnóstico da execução](freecad-mcp/DIAGNOSTICO.md) e [próximas melhorias](ROADMAP.md).

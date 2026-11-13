@@ -1,0 +1,7 @@
+﻿{
+    "deselected":  8,
+    "scope":  "non-integration suite; real Sketcher GUI regression recorded separately",
+    "skipped":  1,
+    "failures":  "0",
+    "passed":  120
+}

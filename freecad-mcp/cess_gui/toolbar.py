@@ -117,7 +117,7 @@ def warn(message):
 
 class CenterCommand:
     def GetResources(self):
-        return {'MenuText': 'Centralizar', 'ToolTip': 'Selecione primeiro o objeto que move e depois a referencia com Ctrl. Alinhe os centros.',
+        return {'MenuText': 'Centralizar', 'ToolTip': 'Centraliza dois objetos ou dois retangulos dentro do mesmo Sketcher.',
                 'Pixmap': str(Path(__file__).parent / 'icons/center.svg')}
 
     def IsActive(self):
@@ -125,17 +125,59 @@ class CenterCommand:
 
     def Activated(self):
         selected = Gui.Selection.getSelection()
+        editing=Gui.activeDocument().getInEdit()
+        sketch=editing.Object if editing and editing.Object.TypeId=='Sketcher::SketchObject' else None
+        if sketch is None and len(selected)==1 and selected[0].TypeId=='Sketcher::SketchObject':sketch=selected[0]
+        if sketch is not None:
+            SketchCenterDialog(sketch).exec_()
+            return
         if len(selected) != 2:
             warn('Selecione dois objetos na arvore, usando Ctrl:\n'
                  '1. Objeto que sera movido (ex.: quadrado menor).\n'
                  '2. Objeto de referencia (ex.: quadrado maior).\n\n'
-                 'Selecione objetos completos. Geometrias dentro do mesmo Sketcher '
-                 'precisam de restricoes do esboco.')
+                 'Para dois retangulos no mesmo Sketcher, abra a edicao do esboco '
+                 'ou selecione somente o Sketch e clique Centralizar.')
             return
         if Gui.activeDocument().getInEdit():
             warn('Feche a edicao do esboco ou da tarefa antes de mover objetos completos.')
             return
         CenterDialog(*selected).exec_()
+
+
+class SketchCenterDialog(QtWidgets.QDialog):
+    def __init__(self,sketch):
+        super().__init__(Gui.getMainWindow())
+        from cess_gui.sketch_center import sketch_rectangles
+        self.sketch=sketch;self.groups=sketch_rectangles(sketch)
+        self.setWindowTitle('Centralizar no Sketcher');self.setMinimumWidth(530)
+        layout=QtWidgets.QVBoxLayout(self)
+        explanation=QtWidgets.QLabel('Escolha os retangulos dentro deste esboco. O menor sera movido por padrao.\n'
+                                    'A referencia e as dimensoes sao preservadas; Ctrl+Z desfaz.')
+        explanation.setWordWrap(True);layout.addWidget(explanation)
+        form=QtWidgets.QFormLayout();self.moving=QtWidgets.QComboBox();self.reference=QtWidgets.QComboBox()
+        for group in self.groups:
+            w,h=group['size'];edges=', '.join(str(e+1) for e in group['edges'])
+            label=f'{w:g} x {h:g} mm — linhas {edges}'
+            self.moving.addItem(label);self.reference.addItem(label)
+        if self.groups:self.reference.setCurrentIndex(len(self.groups)-1)
+        self.axes=QtWidgets.QComboBox()
+        for label,value in [('Horizontal e vertical (XY)','XY'),('Somente horizontal (X)','X'),('Somente vertical (Y)','Y')]:self.axes.addItem(label,value)
+        form.addRow('Mover',self.moving);form.addRow('Referencia fixa',self.reference);form.addRow('Centralizar em',self.axes)
+        layout.addLayout(form);self.feedback=QtWidgets.QLabel();self.feedback.setWordWrap(True);layout.addWidget(self.feedback)
+        buttons=QtWidgets.QDialogButtonBox(QtWidgets.QDialogButtonBox.Ok|QtWidgets.QDialogButtonBox.Cancel)
+        buttons.button(QtWidgets.QDialogButtonBox.Ok).setText('Centralizar')
+        buttons.accepted.connect(self.apply);buttons.rejected.connect(self.reject);layout.addWidget(buttons)
+        if len(self.groups)<2:
+            self.feedback.setText('Nao foram encontrados dois retangulos fechados, paralelos aos eixos do esboco. Linhas de construcao sao ignoradas.')
+            buttons.button(QtWidgets.QDialogButtonBox.Ok).setEnabled(False)
+    def apply(self):
+        from cess_gui.sketch_center import center_sketch_rectangles
+        try:
+            result=center_sketch_rectangles(self.sketch,self.groups[self.moving.currentIndex()]['edges'],
+                                            self.groups[self.reference.currentIndex()]['edges'],self.axes.currentData())
+            Gui.getMainWindow().statusBar().showMessage('Retangulo centralizado em '+result['axes']+'. Ctrl+Z desfaz.',12000)
+            self.accept()
+        except Exception as error:self.feedback.setText(str(error))
 
 
 class DraftCommand:
@@ -170,27 +212,31 @@ def install():
     from cess_gui.generator_dialog import install as install_generators
     install_generators()
     window = Gui.getMainWindow()
-    existing = window.findChild(QtWidgets.QToolBar, TOOLBAR_NAME)
-    if existing is not None:
-        existing.show()
-        return existing
     commands = [CenterCommand(),
                 DraftCommand('Draft_Dimension', 'Colocar cotas',
                              'Cotas Draft: marque os pontos medidos e a posicao da cota. Esc cancela.', 'dimension.svg'),
                 DraftCommand('Draft_Text', 'Inserir texto',
                              'Texto Draft: escolha posicao, conteudo e tamanho no painel de tarefas. Esc cancela.', 'text.svg')]
+    _commands[:]=commands
+    existing = window.findChild(QtWidgets.QToolBar, TOOLBAR_NAME)
+    if existing is not None:
+        for action,command in zip(existing.actions(),commands):
+            action.setToolTip(command.GetResources()['ToolTip'])
+            action.triggered.disconnect()
+            action.triggered.connect(lambda checked=False,command=command:command.Activated())
+        existing.show()
+        return existing
     toolbar = QtWidgets.QToolBar('CESS — Desenho', window)
     toolbar.setObjectName(TOOLBAR_NAME)
     toolbar.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
     toolbar.setIconSize(QtCore.QSize(24, 24))
     for name, command in zip(COMMANDS, commands):
-        Gui.addCommand(name, command)
+        Gui.addCommand(name,command)
         resources = command.GetResources()
         action = toolbar.addAction(QtGui.QIcon(resources['Pixmap']), resources['MenuText'])
         action.setObjectName(name)
         action.setToolTip(resources['ToolTip'])
-        action.triggered.connect(lambda checked=False, name=name: Gui.runCommand(name, 0))
-    _commands.extend(commands)
+        action.triggered.connect(lambda checked=False,command=command:command.Activated())
     window.addToolBar(QtCore.Qt.TopToolBarArea, toolbar)
     toolbar.show()
     window.statusBar().showMessage('CESS — Desenho: Centralizar | Colocar cotas | Inserir texto', 15000)
